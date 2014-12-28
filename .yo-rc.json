@@ -1,0 +1,18 @@
+{
+  "generator-jhipster": {
+    "baseName": "cvapp",
+    "packageName": "io.szmizorsz.cvapp",
+    "packageFolder": "io/szmizorsz/cvapp",
+    "authenticationType": "cookie",
+    "hibernateCache": "ehcache",
+    "clusteredHttpSession": "no",
+    "websocket": "no",
+    "databaseType": "sql",
+    "devDatabaseType": "h2Memory",
+    "prodDatabaseType": "mysql",
+    "useCompass": false,
+    "buildTool": "maven",
+    "frontendBuilder": "grunt",
+    "javaVersion": "8"
+  }
+}
