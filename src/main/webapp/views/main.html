@@ -1,18 +1,166 @@
-<div ng-cloak>
-    <div class="row">
+    <!-- Header -->
+    <header>
+        <div id="header-img"></div>
+        <div class="intro-text">
+            <div class="bottom-space">
+                <span class="name">Curriculum Vitae</span>
+                <hr class="star-light">
+                <span class="motto">Online CV karbantartó alkalmazás, kettős céllal</span>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="purpose">Életrajzom publikálása</div>                    
+                    <hr class="star-light">
+                    <a class="header-link" href smooth-scroll target="tapasztalat">                            
+                        <div class="skills">Szakmai tapasztalat</div>
+                    </a>
+                    <a class="header-link" href smooth-scroll target="tanulmanyok">                            
+                        <div class="skills">Tanulmányok</div>
+                    </a>
+                    <a class="header-link" href smooth-scroll target="motivacio">                            
+                        <div class="skills">Motiváció</div>
+                        <div class="glyphicon glyphicon-chevron-down skills"></div>
+                    </a>
+                </div>                
+                <div class="col-md-6">
+                    <div class="purpose">Technológia ismereteim bővítése</div>                    
+                    <hr class="star-light">
+                    <a class="header-link" href smooth-scroll target="alkalmazasrol">                            
+                        <div class="skills">Java2EE, Spring, NoSQL</div>
+                        <div class="skills">AngularJS, Bootstrap</div>
+                        <div class="skills">JHipster, Cloud Foundry</div>
+                        <div class="glyphicon glyphicon-chevron-down skills"></div>
+                    </a>
+                </div>
+            </div>
+    </header>
 
-        <div class="table-responsive">
-            <table class="table table-striped">
-                <tbody>
-                    <tr ng-repeat="company in companys">
-                        <td>{{company.name}}</td>
-                        <td ng-repeat="project in company.projects">
-                                <li>{{project.name}}</li>                        
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
+
+<div ng-cloak>    
+
+    <div id="menu">
+        <a smooth-scroll target="header-img" href><div class="glyphicon glyphicon-chevron-up skills"></div></a>
+    </div>
+
+    <div class="section-header" id="tapasztalat">
+        Szakmai tapasztalat
+    </div>
+
+        <p class="company"><span class="company-name">Sonrisa Informatikai Kft.</span>: 2009 - Jelenleg</p>
+
+        <p class="company-description">Egyedi szoftver fejlesztésre alapuló informatikai cégnél rendszertervező, üzleti elemző, és esetenként projektvezető szerepkörök ellátása. A projektek teljes életútjának támogatása, illetve a megvalósításban való részvétel, egészen a fejlesztési folyamatokba való bekapcsolódásig. UI tervezés, séma tervezés, felület implementáció, unit tesztelés...</p>
+        <p class="company-description">Az alábbi konkrét projektekben való részvétel:</p>
+
+            <p class="project"><span class="project-name">Cabi Dashboard</span>: MLM ügyfél számára célkitűzés karbantartó, illetve tény és terv adatok vizuális összevetését kiszolgáló dashboard kidolgozása.
+                <span class="technologies"><span class="technology-header">Technológiák</span>: J2EE, Spring, Hibernate, Spring MVC, AngularJS, Bootstrap, MySQL</span></p>
+
+            <p class="project"><span class="project-name">MI6</span>: Telekom szolgáltató számára lokáció alapú, valós idejű mobil hírdetési rendszer informatikai infrastruktúrájának lefektetése.
+                <span class="technologies"><span class="technology-header">Technológiák</span>: Java, Spring, Hazelcast, LMAX, RabbitMQ, Wicket, Greenplum</span></p>
+
+            <p class="project"><span class="project-name">JOKER</span> (Jogosultságkezelő Rendszer): T-Systems Magyarország Zrt.-ben új jogosultságkezelő rendszer bevezetése.
+                <span class="technologies"><span class="technology-header">Technológiák</span>: Java, Spring, Hibernate, Activiti, Wicket, MSSQL</span></p>
+            
+            <p class="project"><span class="project-name"> Smart Traffic</span>: BME Út és Vasútépítési Tanszék számára forgalmi és útburkolat minőségi adatok interaktív térképi megjelenítése.
+                <span class="technologies"><span class="technology-header">Technológiák</span>: Java, Spring MVC, AngularJS, PostgreSQL</span></p>
+
+            <p class="project"><span class="project-name">IDM</span> (Identity Management): A Legfőbb Ügyészség szervezetében az egységesített jogosultságkezelési folyamatokat támogató informatikai megoldás kidolgozása.
+                <span class="technologies"><span class="technology-header">Technológiák</span>: Java, Spring, Hibernate, Wicket, MSSQL</span></p>
+            
+            <p class="project"><span class="project-name">KGR K11</span> (Költségvetés Gazdálkodási Rendszer Adatszolgáltató modul): régi K11 beszámoló rendszer leváltása egy korszerű és rugalmas központi informatikai megoldással.
+                <span class="technologies"><span class="technology-header">Technológiák</span>: Java, Spring, EclipseLink, Wicket, Oracle</span></p>
+
+            <p class="project"><span class="project-name">KGR EGM</span> (Költségvetés Gazdálkodási Rendszer Előirányzat gazdálkodás modul): A Magyar Államkincstár belső rendszereinek és működésének megújítását célzó KGR projektben az Előirányzat gazdálkodási modul folyamatainak és funkcióinak specifikálása.
+
+            <p class="project"><span class="project-name">KEKK-NLR</span> (Napló Rendszer): Közigazgatási és Elektronikus Közszolgáltatások Központi Hivatalában az üzleti tevékenységek napló állományainak elemzését lehetővé tévő megoldás bevezetése.
+                <span class="technologies"><span class="technology-header">Technológiák</span>: Java, Spring, Struts, Oracle</span></p>
+
+
+        <p class="company"><span class="company-name">Budapest Bank Zrt.</span>: 2006 - 2008</p>
+
+        <p class="company-description">Informatikai projektvezetési tevékenységek ellátása, az üzleti oldallal való folyamatos kapcsolattartás, illetve a komplex banki informatikai környezetben az üzleti igények adaptálása, esetleges rendszertervezési feladatok elvégzésével.</p>
+        <p class="company-description">Az alábbi konkrét projektekben való részvétel:</p>
+
+            <p class="project"><span class="project-name">PBR</span>: (Primary Banking Relationship): A kiemelt banki ügyfelek számára nyújtott csomagok bevezetését támogató projektben informatikai projektvezető és rendszerszervező szerepkör</p>
+
+            <p class="project"><span class="project-name">OJK</span>: (Ország- és Jogcímkód): Az ország- és jogcímkód kezelésének törvényi változásait lekövető projektben informatikai projektvezető és rendszerszervező szerepkör</p>
+
+            <p class="project"><span class="project-name">CNC</span>: (Customer Number Cleaning): A fő banki számlavezető rendszer ügyféltörzsében felmerült azonosító képzési problémákat kezelő projektben informatikai projektvezető szerepkör</p>
+
+        <p class="company"><span class="company-name">GE Money Bank Thailand, Bangkok</span>: 2006.02 - 2006.08</p>
+
+        <p class="company-description">Új hitelkártya bevezetését megvalósító projektben informatikai projektvezető, és a hitelkártya elfogadó termináloktól érkező tranzakciók kezelését végző szoftverrel kapcsolatos rendszertervezési feladatok ellátása.</p>
+
+        <p class="company"><span class="company-name">General Electric - Budapest Bank Zrt</span>: 2004 - 2005</p>
+
+        <p class="company-description">A General Electric informatikai projektvezető képző programjában való részvétel, amely a szakmai képzések mellett tényleges projektek végrehajtását jelentette.</p>
+        <p class="company-description">Az alábbi konkrét projektekben való részvétel:</p>
+
+            <p class="project"><span class="project-name">IdED</span>: (IDentity Entitlement Directory): Központi jogosultságkezelés bevezetését előkészítését megcélzó pilot projektben informatikai projektvezető szerepkör</p>
+
+            <p class="project"><span class="project-name">CNC</span>: (Customer Number Cleaning): A fő banki számlavezető rendszer ügyféltörzsében felmerült azonosító képzési problémákat kezelő projektben informatikai projektvezető szerepkör</p>
+
+
+    <div class="section-header" id="tanulmanyok">
+        Tanulmányok, Képzések, Szakmai ismeret
+    </div>
+
+            <p class="project"><span class="project-name">2013-2014</span>: Online kurzusok: Coursera, Code Academy, Code School</p>
+
+            <p class="project"><span class="project-name">2013</span>: SCRUM Alliance, Certified SCRUM Master</p>
+
+            <p class="project"><span class="project-name">2006</span>: Green Belt, General Electric</p>
+
+            <p class="project"><span class="project-name">2004-2006</span>: IMLP (Information Management Leadership Program): Projektvezető Képzés, General Electric</p>
+
+            <p class="project"><span class="project-name">1997–2004:</span>: BME Villamosmérnöki és Informatikai Kar: Műszaki Informatikus diploma</p>
+
+            <p class="project"><span class="project-name">2001–2002</span>: Ecoles des Mines de Nantes, Franciaország: Erasmus program keretében éváthallgatás</p>
+
+            <p class="project"><span class="project-name">1993–1997</span>: József Attila Gimnázium</p>
+
+        <p class="inner-section">Szakmai ismeretek</p>
+
+            <p class="project"><span class="project-name">Programozás</span>: C, C++, Java (J2SE, J2EE), Spring, alap szintű Javascript, AngularJS, Bootstrap</p>
+
+            <p class="project"><span class="project-name">Adatbázis kezelés</span>: relációs: SQL (Oracle, MySQL), ORM (Hibernate), NoSQL: MongoDB</p>
+
+            <p class="project"><span class="project-name">Rendszertervezés, Elemzés</span>: UML, RUP, Provision, Adatbázis tervezési eszközök</p>
+
+            <p class="project"><span class="project-name">Fejlesztési folyamatokat támogató eszközök</span>: Maven, SVN, GIT, Gerrit, Jenkins, Sonar, Grunt, Bower</p>
+
+            <p class="project"><span class="project-name">Projektvezetési módszertanok</span>: SCRUM, Agile, Vízesés, Six Sigma</p>
+
+         <p class="inner-section">Nyelvtudás</p>
+
+            <p class="project"><span class="project-name">Angol</span>: tárgyalási szint, középfokú nyelvvizsga</p>
+
+            <p class="project"><span class="project-name">Francia</span>: megkopott középszint, középfokú nyelvvizsga</p>
+
+            <p class="project"><span class="project-name">Latin</span>: érdeklődési szinten, középfokú nyelvvizsga</p>
+
+            <p class="project"><span class="project-name">Spanyol</span>: alapfok</p>          
+
+        <p class="inner-section">Egyéb</p>
+
+            <p class="project"><span class="project-name">Publikációk</span>: Többrétegű WR-DWDM hálózatok konfigurálása védelemmel, 2001 BME-VIK TDK (Tudományos Diákköri Konferencia) I. hely, 2003 OTDK (Országos Tudományos Diákköri Konferencia) II. hely</p>
+
+            <p class="project"><span class="project-name">Érdeklődés</span>: Pszichológia, Utazás, Versenybridzs, Jóga</p>
+
+    <div class="section-header" id="motivacio">
+        Motiváció
+    </div>
+
+            <p>
+            Eddigi munkám során több komplex informatikai, és szervezeti környezetben dolgoztam, különböző ágazatokban, jelentős tapasztalatokat gyűjtve mind a pénzügyi, mind az államigazgatási szektorban. Az informatikai projektvezetési, rendszerszervezési és üzleti elemzési tapasztalataimat szeretném tovább kamatoztatni, illetve bővíteni újabb szakterületek, környezetek megismerésével, esetlegesen komplex adattárház, adatbányászat, big data, vagy NoSQL technológiákkal kapcsolatos projektekben való részvétellel.
+            </p>
+           
+    <div class="section-header" id="alkalmazasrol">
+        CV App alkalmazásról
+    </div>
+
+            <p>
+            Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum formas humanitatis per seacula quarta decima et quinta decima. Eodem modo typi, qui nunc nobis videntur parum clari, fiant sollemnes in futurum.
+            </p>
 
         <ul ng-repeat="company in companys">
             <li>{{company.name}}</li>
@@ -30,10 +178,10 @@
                 </ul>
         </ul>
 
-        <div class="col-md-8">
-            <h1 translate="main.title">Welcome, Java Hipster!</h1>
-            <p class="lead" translate="main.subtitle">This is your homepage</p>
 
+            
+            <a smooth-scroll target="header-img">Scroll to Top</a>
+            
             <div ng-switch="authenticated">
                 <div class="alert alert-success" ng-switch-when="true"
                      translate="main.logged.message" translate-values="{username: '{{account.login}}'}">
@@ -65,5 +213,4 @@
              <span translate="main.like">If you like JHipster, don't forget to give us a star on </span>&nbsp;<a href="https://github.com/jhipster/generator-jhipster" target="_blank" translate="main.github">Github</a>!
             </p>
         </div>
-    </div>
 </div>

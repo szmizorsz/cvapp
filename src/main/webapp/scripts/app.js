@@ -3,7 +3,7 @@
 /* App Module */
 
 var cvappApp = angular.module('cvappApp', ['http-auth-interceptor', 'tmh.dynamicLocale',
-    'ngResource', 'ngRoute', 'ngCookies', 'cvappAppUtils', 'pascalprecht.translate', 'truncate']);
+    'ngResource', 'ngRoute', 'ngCookies', 'cvappAppUtils', 'pascalprecht.translate', 'truncate', 'angularSmoothscroll']);
 
 cvappApp
     .config(function ($routeProvider, $httpProvider, $translateProvider, tmhDynamicLocaleProvider, USER_ROLES) {

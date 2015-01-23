@@ -15,11 +15,11 @@
         <link rel="stylesheet" href="styles/main.css">
         <!-- endbuild -->
     </head>
-    <body ng-app="cvappApp" >
+    <body ng-app="cvappApp">
         <!--[if lt IE 10]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-        <nav class="navbar navbar-default" role="navigation">
+        <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
             <div class="container">
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
@@ -28,11 +28,13 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                  <a class="navbar-brand" href="#"><span translate="global.title">cvapp</span></a>
+                    <a class="navbar-brand" href="#">
+                        <italic>CV App</italic>
+                    </a>
                 </div>
                 <div class="collapse navbar-collapse" id="navbar-collapse" ng-switch="authenticated">
                     <ul class="nav navbar-nav nav-pills navbar-right">
-                        <li>
+                        <li ng-switch-when="true">
                             <a href="#">
                                 <span class="glyphicon glyphicon-home"></span>
                                 <span translate="global.menu.home">Home</span>
@@ -121,7 +123,7 @@
             </div>
         </nav>
         <div class="container">
-            <div class="well" ng-view=""></div>
+            <div ng-view="" class="padding_top"></div>
 
             <div class="footer">
                 <p translate="footer">This is your footer</p>
@@ -151,6 +153,7 @@
         <script src="bower_components/angular-translate-storage-cookie/angular-translate-storage-cookie.js"></script>
         <script src="bower_components/angular-translate-loader-static-files/angular-translate-loader-static-files.js"></script>
         <script src="bower_components/angular-dynamic-locale/src/tmhDynamicLocale.js"></script>
+        <script src="bower_components/angular-smoothscroll/dist/scripts/bb15da28.scripts.js"></script>
         <script src="scripts/http-auth-interceptor.js"></script>
         <script src="scripts/truncate.js"></script>
         <script src="scripts/utils.js"></script>
@@ -180,6 +183,6 @@
         <script src="scripts/project/router_project.js"></script>
         <script src="scripts/project/controller_project.js"></script>
         <script src="scripts/project/service_project.js"></script>
-        <!-- endbuild -->
+        <!-- endbuild -->         
 </body>
 </html>

@@ -113,3 +113,282 @@ ul#strength {
     width:20px;
 }
 /* end Password strength bar style */
+
+/*!
+ * Start Bootstrap - Freelancer Bootstrap Theme (http://startbootstrap.com)
+ * Code licensed under the Apache License v2.0.
+ * For details, see http://www.apache.org/licenses/LICENSE-2.0.
+ */
+
+body {
+    overflow-x: hidden;
+}
+
+p {
+    font-size: 20px;
+}
+
+p.small {
+    font-size: 16px;
+}
+
+a.header-link,
+a.header-link:hover,
+a.header-link:focus,
+a.header-link:active,
+a.header-link.active {
+    outline: 0;
+    color: #fff;
+    text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-weight: 300;
+}
+
+h2.section {
+    text-align: center;
+}
+
+hr.star-light,
+hr.star-primary {
+    margin: 25px auto 30px;
+    padding: 0;
+    max-width: 250px;
+    border: 0;
+    border-top: solid 5px;
+    text-align: center;
+}
+
+hr.star-light:after,
+hr.star-primary:after {
+    content: "\f005";
+    display: inline-block;
+    position: relative;
+    top: -.8em;
+    padding: 0 .25em;
+    font-family: FontAwesome;
+    font-size: 2em;
+}
+
+hr.star-light {
+    border-color: #fff;
+}
+
+hr.star-light:after {
+    color: #fff;
+    background-color: #18bc9c;
+}
+
+hr.star-primary {
+    border-color: #2c3e50;
+}
+
+hr.star-primary:after {
+    color: #2c3e50;
+    background-color: #fff;
+}
+
+hr.simple {color:  #fff; }
+
+.img-centered {
+    margin: 0 auto;
+}
+
+header {
+    text-align: center;
+    color: #fff;
+    background: #18bc9c;
+    height: 945px;
+}
+
+header .container {
+    padding-top: 0px;
+    padding-bottom: 30px;
+}
+
+#header-img {
+    padding-top: 350px;    
+    padding-bottom: 0px;    
+    display: block;
+    background-image: url('../images/profile.png');
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+header .intro-text .name {
+    display: block;
+    text-transform: uppercase;
+    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 2em;
+    font-weight: 700;
+}
+
+header .intro-text .motto {
+    font-size: 1.25em;  
+    font-weight: 300;
+    padding-bottom: 30px;         
+}
+
+header .intro-text .purpose {
+    padding-top: 10px;
+    font-size: 1.5em;
+    font-weight: 600;
+    font-style: italic;
+}
+
+header .intro-text .skills {
+    font-size: 1.25em;
+    font-weight: 300;
+}
+
+@media(min-width:768px) {
+    header .container {
+        padding-top: 200px;
+        padding-bottom: 100px;
+    }
+
+    header .bottom-space {
+        padding-bottom: 90px;
+    }
+
+    header .intro-text .name {
+        font-size: 4.75em;
+    }
+
+    header .intro-text .motto {
+        font-size: 2.0em;  
+    }
+
+    header .intro-text .purpose {
+        font-size: 2.0em;                
+        padding-bottom: 40px;
+    }
+
+    header .intro-text .skills {
+        font-size: 1.75em;
+    }
+}
+
+@media(min-width:768px) {
+    .navbar-fixed-top {
+        padding: 1px 0;
+        padding-right: 30px;
+        -webkit-transition: padding .3s;
+        -moz-transition: padding .3s;
+        transition: padding .3s;
+    }
+
+    .navbar-fixed-top .navbar-brand {
+        font-size: 1.5em;
+        font-style: italic;
+        padding-left: 40px;
+        -webkit-transition: all .3s;
+        -moz-transition: all .3s;
+        transition: all .3s;
+    }
+
+    .navbar-fixed-top.navbar-shrink {
+        padding: 10px 0;
+    }
+
+    .navbar-fixed-top.navbar-shrink .navbar-brand {
+        font-size: 1.5em;
+    }
+}
+
+.navbar {
+    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-weight: 700;
+}
+
+.navbar a:focus {
+    outline: 0;
+}
+
+
+.navbar .navbar-nav li a:focus {
+    outline: 0;
+}
+
+.navbar-default,
+.navbar-inverse {
+    border: 0;
+}
+
+.padding_top {
+    padding-top: 50px;
+}
+
+.company {
+    padding-left: 10px;
+    padding-top: 10px;
+}
+
+.company-name {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.company-description {
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-left: 50px;
+}
+
+.project {
+    padding-left: 100px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+}
+
+.project-name {
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
+.technologies {
+    float: right;
+    font-size: 16px;
+    padding-top: 10px;
+}
+
+.technology-header {
+    font-weight: bold;
+}
+
+.section-header {
+    background-color: #2C3E50;
+    text-align: center;
+    color: #fff;
+    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 1.5em;
+    font-weight: 600;
+    font-style: italic;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.inner-section {
+    text-align: center;
+    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 1.5em;
+    font-weight: 600;
+    font-style: italic;
+}
+
+#menu {
+  position: fixed;
+  right: 0;
+  top: 100%;
+  width: 8em;
+  margin-top: -2.5em;
+}

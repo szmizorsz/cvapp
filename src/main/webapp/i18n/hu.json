@@ -3,27 +3,27 @@
         "title": "CV App",
         "browsehappy": "You are using an <strong>outdated</strong> browser. Please <a href=\"http://browsehappy.com/?locale=en\">upgrade your browser</a> to improve your experience.",
         "menu": {
-            "home": "Home",
+            "home": "Kezdőlap",
             "entities": {
-                "main": "Entities"
+                "main": "Adatok"
             },
             "account": {
                 "main": "Account",
-                "settings": "Settings",
-                "password": "Password",
+                "settings": "Beállítások",
+                "password": "Jelszó",
                 "sessions": "Sessions",
                 "tracker": "User tracker",
                 "metrics": "Metrics",
                 "health": "Health",
                 "logs": "Logs",
                 "audits": "Audits",
-                "login": "Authenticate",
-                "logout": "Log out",
+                "login": "Bejelentkezés",
+                "logout": "Kijelentkezés",
                 "apidocs": "API",
-                "register": "Register"
+                "register": "Regisztrálás"
             },
-            "admin": "Administration",
-            "language": "Language"
+            "admin": "Admin",
+            "language": "Nyelv"
         },
         "form": {
             "username": "Login",
