@@ -4,6 +4,12 @@ server:
 spring:
     profiles: prod
     
+    data:
+        mongodb:
+            host: localhost
+            port: 27017
+            database: cvapp
+        
     datasource:
         dataSourceClassName: com.mysql.jdbc.jdbc2.optional.MysqlDataSource
         url: jdbc:mysql://localhost:3306/cvapp

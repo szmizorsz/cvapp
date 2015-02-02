@@ -104,6 +104,13 @@
         Tanulmányok, Képzések, Szakmai ismeret
     </div>
 
+        <div ng-repeat="education in educations">
+            <p class="project">
+                <span class="project-name">{{$eval(getLocalizedProperty('education.period'))}}:</span>
+                {{$eval(getLocalizedProperty('education.description'))}}
+            </p>
+        </div>
+
             <p class="project"><span class="project-name">2013-2014</span>: Online kurzusok: Coursera, Code Academy, Code School</p>
 
             <p class="project"><span class="project-name">2013</span>: SCRUM Alliance, Certified SCRUM Master</p>
@@ -178,8 +185,23 @@
                 </ul>
         </ul>
 
+        <ul ng-repeat="education in educations">
+            <li>{{$eval(getLocalizedProperty('education.period'))}}</li>
+        </ul>
 
+
+        <ul ng-repeat="language in languages">
+            <li>{{$eval(getLocalizedProperty('language.name'))}}</li>
+        </ul>
+
+       <ul ng-repeat="knowledge in knowledges">
+            <li>{{$eval(getLocalizedProperty('knowledge.category'))}}</li>
+        </ul>
             
+       <ul ng-repeat="other in others">
+            <li>{{$eval(getLocalizedProperty('other.category'))}}</li>
+        </ul>
+
             <a smooth-scroll target="header-img">Scroll to Top</a>
             
             <div ng-switch="authenticated">

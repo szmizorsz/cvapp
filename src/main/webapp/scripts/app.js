@@ -65,14 +65,14 @@ cvappApp
                     templateUrl: 'views/metrics.html',
                     controller: 'MetricsController',
                     access: {
-                        authorizedRoles: [USER_ROLES.admin]
+                        authorizedRoles: [USER_ROLES.all]
                     }
                 })
                 .when('/health', {
                     templateUrl: 'views/health.html',
                     controller: 'HealthController',
                     access: {
-                        authorizedRoles: [USER_ROLES.admin]
+                        authorizedRoles: [USER_ROLES.all]
                     }
                 })
                 .when('/logs', {
@@ -84,14 +84,14 @@ cvappApp
                         }]
                     },
                     access: {
-                        authorizedRoles: [USER_ROLES.admin]
+                        authorizedRoles: [USER_ROLES.all]
                     }
                 })
                 .when('/audits', {
                     templateUrl: 'views/audits.html',
                     controller: 'AuditsController',
                     access: {
-                        authorizedRoles: [USER_ROLES.admin]
+                        authorizedRoles: [USER_ROLES.all]
                     }
                 })
                 .when('/logout', {
@@ -104,7 +104,7 @@ cvappApp
                 .when('/docs', {
                     templateUrl: 'views/docs.html',
                     access: {
-                        authorizedRoles: [USER_ROLES.admin]
+                        authorizedRoles: [USER_ROLES.all]
                     }
                 })
                 .otherwise({
@@ -114,7 +114,22 @@ cvappApp
                         resolvedCompanyWithProjects: ['PublicCompanyWithProjects', function (PublicCompanyWithProjects) {
                             return PublicCompanyWithProjects.query().$promise;
                         }],
+                        resolvedEducations: ['PublicEducations', function (PublicEducations) {
+                            return PublicEducations.query().$promise;
+                        }],
+                        resolvedLanguages: ['PublicLanguages', function (PublicLanguages) {
+                            return PublicLanguages.query().$promise;
+                        }],
+                        resolvedKnowledges: ['PublicKnowledges', function (PublicKnowledges) {
+                            return PublicKnowledges.query().$promise;
+                        }],
+                        resolvedOthers: ['PublicOthers', function (PublicOthers) {
+                            return PublicOthers.query().$promise;
+                        }],
                     },
+                    access: {
+                        authorizedRoles: [USER_ROLES.all]
+                    }
                 });
 
             // Initialize angular-translate

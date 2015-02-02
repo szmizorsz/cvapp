@@ -1,8 +1,6 @@
 ---
 path: .
 instances: 1
-services:
-- cvapp
 applications:
 - name: cvapp
   env:

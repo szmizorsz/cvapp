@@ -2,8 +2,17 @@
 
 /* Controllers */
 
-cvappApp.controller('MainController', function ($scope, resolvedCompanyWithProjects) {
+cvappApp.controller('MainController', function ($scope, resolvedCompanyWithProjects, resolvedEducations, resolvedLanguages, resolvedKnowledges, resolvedOthers, $translate) {
         $scope.companys = resolvedCompanyWithProjects;
+        $scope.educations = resolvedEducations;
+        $scope.languages = resolvedLanguages;
+        $scope.knowledges = resolvedKnowledges;
+        $scope.others = resolvedOthers;
+
+        $scope.getLocalizedProperty = function (propertyName) {
+            return propertyName + $translate.storage().get('NG_TRANSLATE_LANG_KEY').charAt(0).toUpperCase() + $translate.storage().get('NG_TRANSLATE_LANG_KEY').slice(1);            
+        };
+
     });
 
 cvappApp.controller('AdminController', function ($scope) {

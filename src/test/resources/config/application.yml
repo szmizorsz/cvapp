@@ -13,6 +13,11 @@ async:
 
 spring:
     
+    data:
+        mongodb:
+             host: localhost
+             port: 27017
+             database: cvapp
     
     datasource:
         dataSourceClassName: org.h2.jdbcx.JdbcDataSource

@@ -103,10 +103,11 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
                 .antMatchers("/app/rest/register").permitAll()
                 .antMatchers("/app/rest/activate").permitAll()
                 .antMatchers("/app/rest/authenticate").permitAll()
-                .antMatchers("/app/rest/logs/**").hasAuthority(AuthoritiesConstants.ADMIN)
+                //.antMatchers("/app/rest/logs/**").authenticated()
+                //.antMatchers("/app/rest/audits/**").authenticated()
                 .antMatchers("/app/**").authenticated()
-                .antMatchers("/metrics/**").hasAuthority(AuthoritiesConstants.ADMIN)
-                .antMatchers("/health/**").hasAuthority(AuthoritiesConstants.ADMIN)
+                .antMatchers("/metrics/**").authenticated()
+                .antMatchers("/health/**").authenticated()
                 .antMatchers("/trace/**").hasAuthority(AuthoritiesConstants.ADMIN)
                 .antMatchers("/dump/**").hasAuthority(AuthoritiesConstants.ADMIN)
                 .antMatchers("/shutdown/**").hasAuthority(AuthoritiesConstants.ADMIN)
@@ -115,7 +116,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
                 .antMatchers("/autoconfig/**").hasAuthority(AuthoritiesConstants.ADMIN)
                 .antMatchers("/env/**").hasAuthority(AuthoritiesConstants.ADMIN)
                 .antMatchers("/trace/**").hasAuthority(AuthoritiesConstants.ADMIN)
-                .antMatchers("/api-docs/**").hasAuthority(AuthoritiesConstants.ADMIN)
+                .antMatchers("/api-docs/**").authenticated()
                 .antMatchers("/protected/**").authenticated();
 
     }

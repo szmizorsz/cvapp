@@ -51,18 +51,6 @@ public class ProjectResource {
     }
 
     /**
-     * GET  /rest/public/projects -> get all the projects.
-     */
-    @RequestMapping(value = "/rest/public/projects",
-            method = RequestMethod.GET,
-            produces = MediaType.APPLICATION_JSON_VALUE)
-    @Timed
-    public List<Project> getAllPublic() {
-        log.debug("REST request to get all public Projects");
-        return projectRepository.findAll();
-    }
-
-    /**
      * GET  /rest/projects/:id -> get the "id" project.
      */
     @RequestMapping(value = "/rest/projects/{id}",

@@ -175,7 +175,6 @@ public class Project implements Serializable {
                 ", start='" + start + "'" +
                 ", end='" + end + "'" +
                 ", note='" + note + "'" +
-                ", company='" + company.toString() + "'" +
                 '}';
     }
 }

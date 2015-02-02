@@ -31,7 +31,7 @@ public class AuditResource {
     @RequestMapping(value = "/rest/audits/all",
             method = RequestMethod.GET,
             produces = MediaType.APPLICATION_JSON_VALUE)
-    @RolesAllowed(AuthoritiesConstants.ADMIN)
+    //@RolesAllowed(AuthoritiesConstants.ADMIN)
     public List<AuditEvent> findAll() {
         return auditEventService.findAll();
     }
@@ -39,7 +39,7 @@ public class AuditResource {
     @RequestMapping(value = "/rest/audits/byDates",
             method = RequestMethod.GET,
             produces = MediaType.APPLICATION_JSON_VALUE)
-    @RolesAllowed(AuthoritiesConstants.ADMIN)
+    //@RolesAllowed(AuthoritiesConstants.ADMIN)
     public List<AuditEvent> findByDates(@RequestParam(value = "fromDate") LocalDateTime fromDate,
                                     @RequestParam(value = "toDate") LocalDateTime toDate) {
         return auditEventService.findByDates(fromDate, toDate);

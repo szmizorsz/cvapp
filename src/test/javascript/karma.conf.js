@@ -23,6 +23,7 @@ module.exports = function (config) {
             'src/main/webapp/bower_components/angular-translate-storage-cookie/angular-translate-storage-cookie.js',
             'src/main/webapp/bower_components/angular-translate-loader-static-files/angular-translate-loader-static-files.js',
             'src/main/webapp/bower_components/angular-dynamic-locale/src/tmhDynamicLocale.js',
+            'src/main/webapp/bower_components/angular-smoothscroll/dist/scripts/bb15da28.scripts.js',
             'src/main/webapp/scripts/*.js',
             'src/main/webapp/scripts/**/*.js',
             'src/test/javascript/**/!(karma.conf).js'
@@ -36,7 +37,7 @@ module.exports = function (config) {
 
         // level of logging
         // possible values: LOG_DISABLE || LOG_ERROR || LOG_WARN || LOG_INFO || LOG_DEBUG
-        logLevel: config.LOG_INFO,
+        logLevel: config.LOG_DEBUG,
 
         // enable / disable watching file and executing tests whenever any file changes
         autoWatch: false,

@@ -39,7 +39,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 @RunWith(SpringJUnit4ClassRunner.class)
 @SpringApplicationConfiguration(classes = Application.class)
 @WebAppConfiguration
-public class PublicCompanyResourceTest {
+public class PublicCompanyResourceT {
 
 	private static final String FIRST_COMPANY_NAME = "FIRST_COMPANY";
     private static final String SECOND_COMPANY_NAME = "SECOND_COMPANY";
@@ -86,7 +86,7 @@ public class PublicCompanyResourceTest {
     public void setup() {
         MockitoAnnotations.initMocks(this);
         
-        PublicCompanyResource pubilcCompanyResource = new PublicCompanyResource();
+        PublicResource pubilcCompanyResource = new PublicResource();
         ReflectionTestUtils.setField(pubilcCompanyResource, "companyRepository", companyRepository);
         this.restPublicCompanyMockMvc = MockMvcBuilders.standaloneSetup(pubilcCompanyResource).build();
     }
