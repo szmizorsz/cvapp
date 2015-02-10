@@ -8,5 +8,12 @@
     <include file="classpath:config/liquibase/changelog/20141118174525_added_entity_Technology.xml" relativeToChangelogFile="false"/>
     <include file="classpath:config/liquibase/changelog/20141118175141_added_entity_Company.xml" relativeToChangelogFile="false"/>
     <include file="classpath:config/liquibase/changelog/20141118180219_added_entity_Project.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20150202151005_change_entity_Company.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20150202171505_rename_columns_company_entity.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20150203115700_final_company_entity.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20150203140600_final_project_entity.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20150204140305_period_column_and_datatype_changes_Company.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20150204171100_data_load.xml" relativeToChangelogFile="false"/>
     <!-- JHipster will add liquibase changelogs here -->
+    
 </databaseChangeLog>

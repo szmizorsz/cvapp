@@ -94,49 +94,43 @@ public class PublicCompanyResourceT {
     @Before
     public void initTest() {
         project = new Project();
-        project.setName(DEFAULT_NAME);
-        project.setDescription(DEFAULT_DESCRIPTION);
-        project.setRole(DEFAULT_ROLE);
-        project.setClient(DEFAULT_CLIENT);
+        project.setNameEn(DEFAULT_NAME);
+        project.setDescriptionEn(DEFAULT_DESCRIPTION);
+        project.setClientEn(DEFAULT_CLIENT);
         project.setStart(DEFAULT_START);
         project.setEnd(DEFAULT_END);
-        project.setNote(DEFAULT_NOTE);
         
         firstCompany = new Company();
-        firstCompany.setName(FIRST_COMPANY_NAME);
-        firstCompany.setDescription(DEFAULT_DESCRIPTION);
+        firstCompany.setNameEn(FIRST_COMPANY_NAME);
+        firstCompany.setDescriptionEn(DEFAULT_DESCRIPTION);
         firstCompaniesProjects = new HashSet<>();
         firstCompany.setProjects(firstCompaniesProjects);
         companyRepository.saveAndFlush(firstCompany);
 
         firstProject = new Project();
-        firstProject.setName(FIRST_PROJECT_NAME);
-        firstProject.setDescription(DEFAULT_DESCRIPTION);
-        firstProject.setRole(DEFAULT_ROLE);
-        firstProject.setClient(DEFAULT_CLIENT);
+        firstProject.setNameEn(FIRST_PROJECT_NAME);
+        firstProject.setDescriptionEn(DEFAULT_DESCRIPTION);
+        firstProject.setClientEn(DEFAULT_CLIENT);
         firstProject.setStart(DEFAULT_START);
         firstProject.setEnd(DEFAULT_END);
-        firstProject.setNote(DEFAULT_NOTE);      
         firstProject.setCompany(firstCompany);
         projectRepository.saveAndFlush(firstProject);
 
         firstCompany.getProjects().add(firstProject);
         
         secondCompany = new Company();
-        secondCompany.setName(SECOND_COMPANY_NAME);
-        secondCompany.setDescription(DEFAULT_DESCRIPTION);
+        secondCompany.setNameEn(SECOND_COMPANY_NAME);
+        secondCompany.setDescriptionEn(DEFAULT_DESCRIPTION);
         secondCompaniesProjects = new HashSet<>();
         secondCompany.setProjects(secondCompaniesProjects);
         companyRepository.saveAndFlush(secondCompany);
         
         secondProject = new Project();
-        secondProject.setName(SECOND_PROJECT_NAME);
-        secondProject.setDescription(DEFAULT_DESCRIPTION);
-        secondProject.setRole(DEFAULT_ROLE);
-        secondProject.setClient(DEFAULT_CLIENT);
+        secondProject.setNameEn(SECOND_PROJECT_NAME);
+        secondProject.setDescriptionEn(DEFAULT_DESCRIPTION);
+        secondProject.setClientEn(DEFAULT_CLIENT);
         secondProject.setStart(DEFAULT_START);
         secondProject.setEnd(DEFAULT_END);
-        secondProject.setNote(DEFAULT_NOTE);       
         secondProject.setCompany(secondCompany);
         projectRepository.saveAndFlush(secondProject);   
         

@@ -57,11 +57,15 @@ public class PublicResource {
     @Timed
     public List<CompanyWithProjectsDTO> getAllCompanyWithProjects() {
         log.debug("REST request to get all Companys with Projects and Technolgies");
-        return companyRepository.findAllWithEagerRelationships()        		        		
+        return companyRepository.findAllWithEagerRelationships(new Sort(Sort.Direction.DESC, "periodEn"))        		        		
                 .stream()
                 .map(company -> new CompanyWithProjectsDTO(
-                            			company.getName(),
-                            			company.getDescription(),
+                            			company.getNameEn(),
+                            			company.getNameHu(),
+                            			company.getDescriptionEn(),
+                            			company.getDescriptionHu(),
+                            			company.getPeriodEn(),
+                            			company.getPeriodHu(),
                             			company.getProjects()
                             				.stream()
                             				.collect(Collectors.toList())

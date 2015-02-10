@@ -20,30 +20,34 @@
                     </div>
                     <div class="modal-body">
                         <div class="form-group">
-                            <label>ID</label>
-                            <input type="text" class="form-control" name="id"
-                                   ng-model="project.id" readonly>
-                        </div>
-
-                        <div class="form-group">
-                            <label>Name</label>
+                            <label>NameEN</label>
                             <input type="text" class="form-control"
-                                   ng-model="project.name">
+                                   ng-model="project.nameEn">
                         </div>
                         <div class="form-group">
-                            <label>Description</label>
+                            <label>NameHu</label>
                             <input type="text" class="form-control"
-                                   ng-model="project.description">
+                                   ng-model="project.nameHu">
                         </div>
                         <div class="form-group">
-                            <label>Role</label>
+                            <label>DescriptionEn</label>
                             <input type="text" class="form-control"
-                                   ng-model="project.role">
+                                   ng-model="project.descriptionEn">
                         </div>
                         <div class="form-group">
-                            <label>Client</label>
+                            <label>DescriptionHu</label>
                             <input type="text" class="form-control"
-                                   ng-model="project.client">
+                                   ng-model="project.descriptionHu">
+                        </div>
+                        <div class="form-group">
+                            <label>ClientEn</label>
+                            <input type="text" class="form-control"
+                                   ng-model="project.clientEn">
+                        </div>
+                        <div class="form-group">
+                            <label>ClientHu</label>
+                            <input type="text" class="form-control"
+                                   ng-model="project.clientHu">
                         </div>
                         <div class="form-group">
                             <label>Start</label>
@@ -55,15 +59,10 @@
                             <input type="date" class="form-control"
                                    ng-model="project.end">
                         </div>
-                        <div class="form-group">
-                            <label>Note</label>
-                            <input type="text" class="form-control"
-                                   ng-model="project.note">
-                        </div>
-
+                        
                         <div class="form-group">
                             <label>company</label>
-                            <select class="form-control" ng-model="project.company.id" ng-options="company.id as company.name for company in companys">
+                            <select class="form-control" ng-model="project.company.id" ng-options="company.id as company.nameEn for company in companys">
                             </select>
                         </div>
                          <div class="form-group">
@@ -90,29 +89,29 @@
         <table class="table table-striped">
             <thead>
                 <tr>
-                    <th>ID</th>
-                    <th>Name</th>
-                    <th>Description</th>
-                    <th>Role</th>
-                    <th>Client</th>
+                    <th>NameEn</th>
+                    <th>NameHu</th>
+                    <th>DescriptionEn</th>
+                    <th>DescriptionHu</th>
+                    <th>ClientEn</th>
+                    <th>ClientHu</th>
                     <th>Start</th>
                     <th>End</th>
-                    <th>Note</th>
                     <th>company</th>
                     <th></th>
                 </tr>
             </thead>
             <tbody>
                 <tr ng-repeat="project in projects">
-                    <td>{{project.id}}</td>
-                    <td>{{project.name}}</td>
-                    <td>{{project.description}}</td>
-                    <td>{{project.role}}</td>
-                    <td>{{project.client}}</td>
+                    <td>{{project.nameEn}}</td>
+                    <td>{{project.nameHu}}</td>
+                    <td>{{project.descriptionEn}}</td>
+                    <td>{{project.descriptionHu}}</td>
+                    <td>{{project.clientEn}}</td>
+                    <td>{{project.clientHu}}</td>
                     <td>{{project.start}}</td>
                     <td>{{project.end}}</td>
-                    <td>{{project.note}}</td>
-                    <td>{{project.company.name}}</td>
+                    <td>{{project.company.nameEn}}</td>
                     <td>
                         <button type="submit"
                                 ng-click="update(project.id)"

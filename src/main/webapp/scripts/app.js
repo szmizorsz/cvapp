@@ -95,7 +95,7 @@ cvappApp
                     }
                 })
                 .when('/logout', {
-                    templateUrl: 'views/main.html',
+                    templateUrl: 'views/pbulic.html',
                     controller: 'LogoutController',
                     access: {
                         authorizedRoles: [USER_ROLES.all]
@@ -108,8 +108,8 @@ cvappApp
                     }
                 })
                 .otherwise({
-                    templateUrl: 'views/main.html',
-                    controller: 'MainController',
+                    templateUrl: 'views/public.html',
+                    controller: 'PublicController',
                     resolve:{
                         resolvedCompanyWithProjects: ['PublicCompanyWithProjects', function (PublicCompanyWithProjects) {
                             return PublicCompanyWithProjects.query().$promise;

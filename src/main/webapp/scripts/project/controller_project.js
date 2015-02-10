@@ -28,6 +28,6 @@ cvappApp.controller('ProjectController', function ($scope, resolvedProject, Proj
         };
 
         $scope.clear = function () {
-            $scope.project = {name: null, description: null, role: null, client: null, start: null, end: null, note: null, id: null};
+            $scope.project = {nameEn: null, nameHu: null, descriptionEn: null, descriptionHu: null, clientEn: null, clientHu: null, start: null, end: null, id: null};
         };
     });

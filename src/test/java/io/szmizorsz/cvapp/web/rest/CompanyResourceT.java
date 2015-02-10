@@ -60,8 +60,8 @@ public class CompanyResourceT {
     @Before
     public void initTest() {
         company = new Company();
-        company.setName(DEFAULT_NAME);
-        company.setDescription(DEFAULT_DESCRIPTION);
+        company.setNameEn(DEFAULT_NAME);
+        company.setDescriptionEn(DEFAULT_DESCRIPTION);
     }
 
     @Test
@@ -80,8 +80,8 @@ public class CompanyResourceT {
         List<Company> companys = companyRepository.findAll();
         assertThat(companys).hasSize(1);
         Company testCompany = companys.iterator().next();
-        assertThat(testCompany.getName()).isEqualTo(DEFAULT_NAME);
-        assertThat(testCompany.getDescription()).isEqualTo(DEFAULT_DESCRIPTION);
+        assertThat(testCompany.getNameEn()).isEqualTo(DEFAULT_NAME);
+        assertThat(testCompany.getDescriptionEn()).isEqualTo(DEFAULT_DESCRIPTION);
     }
 
     @Test
@@ -130,8 +130,8 @@ public class CompanyResourceT {
         companyRepository.saveAndFlush(company);
 
         // Update the company
-        company.setName(UPDATED_NAME);
-        company.setDescription(UPDATED_DESCRIPTION);
+        company.setNameEn(UPDATED_NAME);
+        company.setDescriptionEn(UPDATED_DESCRIPTION);
         restCompanyMockMvc.perform(post("/app/rest/companys")
                 .contentType(TestUtil.APPLICATION_JSON_UTF8)
                 .content(TestUtil.convertObjectToJsonBytes(company)))
@@ -141,8 +141,8 @@ public class CompanyResourceT {
         List<Company> companys = companyRepository.findAll();
         assertThat(companys).hasSize(1);
         Company testCompany = companys.iterator().next();
-        assertThat(testCompany.getName()).isEqualTo(UPDATED_NAME);
-        assertThat(testCompany.getDescription()).isEqualTo(UPDATED_DESCRIPTION);;
+        assertThat(testCompany.getNameEn()).isEqualTo(UPDATED_NAME);
+        assertThat(testCompany.getDescriptionEn()).isEqualTo(UPDATED_DESCRIPTION);;
     }
 
     @Test

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+
+    <property name="now" value="now()" dbms="mysql,h2"/>
+    <property name="now" value="current_timestamp" dbms="postgresql"/>
+
+    <!--
+        Finalize the entity Company.
+    -->
+    <changeSet id="20150202171505" author="szabi">
+    
+    	<addColumn tableName="T_COMPANY">
+        	<column name="description_hu" type="varchar(255)"/>
+    	</addColumn>
+    	        
+    </changeSet>
+</databaseChangeLog>

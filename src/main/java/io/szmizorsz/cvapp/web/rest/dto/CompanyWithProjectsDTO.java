@@ -6,36 +6,80 @@ import java.util.List;
 
 public class CompanyWithProjectsDTO {
 
-	private String name;
+	private String nameEn;
 
-    private String description;
+	private String nameHu;
 
-    private List<Project> projects;
+	private String descriptionEn;
+
+	private String descriptionHu;
+
+	private String periodEn;
+
+	private String periodHu;
+
+	private List<Project> projects;
     
     public CompanyWithProjectsDTO() {
     }
 
-    public CompanyWithProjectsDTO(String name, String description, List<Project> projects) {
-        this.name = name;
-        this.description = description;
+    public CompanyWithProjectsDTO(String nameEn, String nameHu, String descriptionEn, String descriptionHu, String periodEn, String periodHu, List<Project> projects) {
+        this.nameEn = nameEn;
+        this.nameHu = nameHu;
+        this.descriptionEn = descriptionEn;
+        this.descriptionHu = descriptionHu;
+        this.periodEn = periodEn;
+        this.periodHu = periodHu;
         this.projects = projects;
     }
 
-    public String getName() {
-        return name;
+    public String getNameEn() {
+        return nameEn;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setNameEn(String nameEn) {
+        this.nameEn = nameEn;
+    }
+    
+	public String getNameHu() {
+		return nameHu;
+	}
+
+	public void setNameHu(String nameHu) {
+		this.nameHu = nameHu;
+	}
+
+    public String getDescriptionEn() {
+        return descriptionEn;
     }
 
-    public String getDescription() {
-        return description;
+    public void setDescriptionEn(String descriptionEn) {
+        this.descriptionEn = descriptionEn;
     }
+    
+	public String getDescriptionHu() {
+		return descriptionHu;
+	}
 
-    public void setDescription(String description) {
-        this.description = description;
-    }
+	public void setDescriptionHu(String descriptionHu) {
+		this.descriptionHu = descriptionHu;
+	}
+
+	public String getPeriodEn() {
+		return periodEn;
+	}
+
+	public void setPeriodEn(String periodEn) {
+		this.periodEn = periodEn;
+	}
+
+	public String getPeriodHu() {
+		return periodHu;
+	}
+
+	public void setPeriodHu(String periodHu) {
+		this.periodHu = periodHu;
+	}
 
     public List<Project> getProjects() {
         return projects;
@@ -48,8 +92,12 @@ public class CompanyWithProjectsDTO {
     @Override
     public String toString() {
         return "Company{" +
-                ", name='" + name + "'" +
-                ", description='" + description + "'" +
+                ", nameEn='" + nameEn + "'" +
+                ", nameHu='" + nameHu + "'" +
+                ", descriptionEn='" + descriptionEn + "'" +
+                ", descriptionHu='" + descriptionHu + "'" +
+                ", periodEn='" + periodEn + "'" +
+                ", periodHu='" + periodHu + "'" +                
                 '}';
     }
 

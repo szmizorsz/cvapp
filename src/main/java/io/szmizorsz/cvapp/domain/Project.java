@@ -29,17 +29,23 @@ public class Project implements Serializable {
     @GeneratedValue(strategy = GenerationType.TABLE)
     private Long id;
 
-    @Column(name = "name")
-    private String name;
+    @Column(name = "name_en")
+    private String nameEn;
 
-    @Column(name = "description")
-    private String description;
+    @Column(name = "name_hu")
+    private String nameHu;
 
-    @Column(name = "role")
-    private String role;
+    @Column(name = "description_en")
+    private String descriptionEn;
 
-    @Column(name = "client")
-    private String client;
+    @Column(name = "description_hu")
+    private String descriptionHu;
+
+    @Column(name = "client_en")
+    private String clientEn;
+
+    @Column(name = "client_hu")
+    private String clientHu;
 
     @Type(type = "org.jadira.usertype.dateandtime.joda.PersistentLocalDate")
     @JsonDeserialize(using = LocalDateDeserializer.class)
@@ -52,9 +58,6 @@ public class Project implements Serializable {
     @JsonSerialize(using = CustomLocalDateSerializer.class)
     @Column(name = "end", nullable = false)
     private LocalDate end;
-
-    @Column(name = "note")
-    private String note;
 
     @ManyToOne
     private Company company;
@@ -71,39 +74,55 @@ public class Project implements Serializable {
         this.id = id;
     }
 
-    public String getName() {
-        return name;
-    }
+    public String getNameEn() {
+		return nameEn;
+	}
 
-    public void setName(String name) {
-        this.name = name;
-    }
+	public void setNameEn(String nameEn) {
+		this.nameEn = nameEn;
+	}
 
-    public String getDescription() {
-        return description;
-    }
+	public String getNameHu() {
+		return nameHu;
+	}
 
-    public void setDescription(String description) {
-        this.description = description;
-    }
+	public void setNameHu(String nameHu) {
+		this.nameHu = nameHu;
+	}
 
-    public String getRole() {
-        return role;
-    }
+	public String getDescriptionEn() {
+		return descriptionEn;
+	}
 
-    public void setRole(String role) {
-        this.role = role;
-    }
+	public void setDescriptionEn(String descriptionEn) {
+		this.descriptionEn = descriptionEn;
+	}
 
-    public String getClient() {
-        return client;
-    }
+	public String getDescriptionHu() {
+		return descriptionHu;
+	}
 
-    public void setClient(String client) {
-        this.client = client;
-    }
+	public void setDescriptionHu(String descriptionHu) {
+		this.descriptionHu = descriptionHu;
+	}
 
-    public LocalDate getStart() {
+	public String getClientEn() {
+		return clientEn;
+	}
+
+	public void setClientEn(String clientEn) {
+		this.clientEn = clientEn;
+	}
+
+	public String getClientHu() {
+		return clientHu;
+	}
+
+	public void setClientHu(String clientHu) {
+		this.clientHu = clientHu;
+	}
+
+	public LocalDate getStart() {
         return start;
     }
 
@@ -117,14 +136,6 @@ public class Project implements Serializable {
 
     public void setEnd(LocalDate end) {
         this.end = end;
-    }
-
-    public String getNote() {
-        return note;
-    }
-
-    public void setNote(String note) {
-        this.note = note;
     }
 
     public Company getCompany() {
@@ -168,13 +179,14 @@ public class Project implements Serializable {
     public String toString() {
         return "Project{" +
                 "id=" + id +
-                ", name='" + name + "'" +
-                ", description='" + description + "'" +
-                ", role='" + role + "'" +
-                ", client='" + client + "'" +
+                ", nameEn='" + nameEn + "'" +
+                ", nameHu='" + nameHu + "'" +
+                ", descriptionEn='" + descriptionEn + "'" +
+                ", descriptionHu='" + descriptionHu + "'" +
+                ", clientEn='" + clientEn + "'" +
+                ", clientHu='" + clientHu + "'" +
                 ", start='" + start + "'" +
                 ", end='" + end + "'" +
-                ", note='" + note + "'" +
                 '}';
     }
 }

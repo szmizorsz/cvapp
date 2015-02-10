@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+
+    <property name="now" value="now()" dbms="mysql,h2"/>
+    <property name="now" value="current_timestamp" dbms="postgresql"/>
+
+    <!--
+        Add period to Company and char size changes
+    -->
+    <changeSet id="20150204140305" author="szabi">
+    
+    	<addColumn tableName="T_COMPANY">
+        	<column name="period_en" type="varchar(255)"/>
+    	</addColumn>
+    
+        <addColumn tableName="T_COMPANY">
+        	<column name="period_hu" type="varchar(255)"/>
+    	</addColumn>
+    	
+    	<modifyDataType 
+            columnName="description_en"
+            newDataType="varchar(1000)"
+            tableName="T_COMPANY"/>
+    
+    	<modifyDataType 
+            columnName="description_hu"
+            newDataType="varchar(1000)"
+            tableName="T_COMPANY"/>
+    
+		<modifyDataType 
+            columnName="description_en"
+            newDataType="varchar(1000)"
+            tableName="T_PROJECT"/>
+    
+    	<modifyDataType 
+            columnName="description_hu"
+            newDataType="varchar(1000)"
+            tableName="T_PROJECT"/>
+    
+    </changeSet>
+</databaseChangeLog>

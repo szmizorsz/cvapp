@@ -23,13 +23,25 @@ public class Company implements Serializable {
     @GeneratedValue(strategy = GenerationType.TABLE)
     private Long id;
 
-    @Column(name = "name")
-    private String name;
+    @Column(name = "name_en")
+    private String nameEn;
 
-    @Column(name = "description")
-    private String description;
+	@Column(name = "name_hu")
+    private String nameHu;
 
-    @OneToMany(mappedBy = "company")
+    @Column(name = "description_en")
+    private String descriptionEn;
+
+	@Column(name = "description_hu")
+    private String descriptionHu;
+
+	@Column(name = "period_en")
+    private String periodEn;
+
+	@Column(name = "period_hu")
+    private String periodHu;
+
+	@OneToMany(mappedBy = "company")
     @JsonIgnore
     @Cache(usage = CacheConcurrencyStrategy.NONSTRICT_READ_WRITE)
     private Set<Project> projects = new HashSet<>();
@@ -41,22 +53,54 @@ public class Company implements Serializable {
     public void setId(Long id) {
         this.id = id;
     }
+    
+    public String getNameEn() {
+		return nameEn;
+	}
 
-    public String getName() {
-        return name;
-    }
+	public void setNameEn(String nameEn) {
+		this.nameEn = nameEn;
+	}
 
-    public void setName(String name) {
-        this.name = name;
-    }
+	public String getDescriptionEn() {
+		return descriptionEn;
+	}
 
-    public String getDescription() {
-        return description;
-    }
+	public void setDescriptionEn(String descriptionEn) {
+		this.descriptionEn = descriptionEn;
+	}
 
-    public void setDescription(String description) {
-        this.description = description;
-    }
+	public String getDescriptionHu() {
+		return descriptionHu;
+	}
+
+	public void setDescriptionHu(String descriptionHu) {
+		this.descriptionHu = descriptionHu;
+	}
+    
+    public String getNameHu() {
+		return nameHu;
+	}
+
+	public void setNameHu(String nameHu) {
+		this.nameHu = nameHu;
+	}
+	
+	public String getPeriodEn() {
+		return periodEn;
+	}
+
+	public void setPeriodEn(String periodEn) {
+		this.periodEn = periodEn;
+	}
+
+	public String getPeriodHu() {
+		return periodHu;
+	}
+
+	public void setPeriodHu(String periodHu) {
+		this.periodHu = periodHu;
+	}
 
     public Set<Project> getProjects() {
         return projects;
@@ -91,8 +135,12 @@ public class Company implements Serializable {
     public String toString() {
         return "Company{" +
                 "id=" + id +
-                ", name='" + name + "'" +
-                ", description='" + description + "'" +
+                ", nameEn='" + nameEn + "'" +
+                ", nameHu='" + nameHu + "'" +
+                ", descriptionEn='" + descriptionEn + "'" +
+                ", descriptionHu='" + descriptionHu + "'" +
+                ", periodEn='" + periodEn + "'" +
+                ", periodHu='" + periodHu + "'" +
                 '}';
     }
 }

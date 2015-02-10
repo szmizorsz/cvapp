@@ -26,16 +26,35 @@
                         </div>
 
                         <div class="form-group">
-                            <label>Name</label>
+                            <label>NameEn</label>
                             <input type="text" class="form-control"
-                                   ng-model="company.name">
+                                   ng-model="company.nameEn">
                         </div>
                         <div class="form-group">
-                            <label>Description</label>
+                            <label>NameHu</label>
                             <input type="text" class="form-control"
-                                   ng-model="company.description">
+                                   ng-model="company.nameHu">
                         </div>
-
+                        <div class="form-group">
+                            <label>PeriodEn</label>
+                            <input type="text" class="form-control"
+                                   ng-model="company.periodEn">
+                        </div>
+                        <div class="form-group">
+                            <label>PeriodHu</label>
+                            <input type="text" class="form-control"
+                                   ng-model="company.periodHu">
+                        </div>
+                        <div class="form-group">
+                            <label>DescriptionEn</label>
+                            <input type="text" class="form-control"
+                                   ng-model="company.descriptionEn">
+                        </div>
+                        <div class="form-group">
+                            <label>DescriptionHu</label>
+                            <input type="text" class="form-control"
+                                   ng-model="company.descriptionHu">
+                        </div>
 
                     </div>
                     <div class="modal-footer">
@@ -56,16 +75,24 @@
             <thead>
                 <tr>
                     <th>ID</th>
-                    <th>Name</th>
-                    <th>Description</th>
+                    <th>NameEn</th>
+                    <th>NameHu</th>
+                    <th>PeriodEn</th>
+                    <th>PeriodHu</th>
+                    <th>DescriptionEn</th>
+                    <th>DescriptionHu</th>
                     <th></th>
                 </tr>
             </thead>
             <tbody>
                 <tr ng-repeat="company in companys">
                     <td>{{company.id}}</td>
-                    <td>{{company.name}}</td>
-                    <td>{{company.description}}</td>
+                    <td>{{company.nameEn}}</td>
+                    <td>{{company.nameHu}}</td>
+                    <td>{{company.periodEn}}</td>
+                    <td>{{company.periodHu}}</td>
+                    <td>{{company.descriptionEn}}</td>
+                    <td>{{company.descriptionHu}}</td>
                     <td>
                         <button type="submit"
                                 ng-click="update(company.id)"

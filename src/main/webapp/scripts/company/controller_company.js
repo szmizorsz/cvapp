@@ -27,6 +27,6 @@ cvappApp.controller('CompanyController', function ($scope, resolvedCompany, Comp
         };
 
         $scope.clear = function () {
-            $scope.company = {name: null, description: null, id: null};
+            $scope.company = {nameEn: null, nameHu: null, periodEn: null, periodHu: null, descriptionEn: null, descriptionHu: null, id: null};
         };
     });

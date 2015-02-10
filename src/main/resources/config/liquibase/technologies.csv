@@ -1,0 +1,21 @@
+id;name;description
+1;J2EE;NULL
+2;Spring;NULL
+3;Hibernate;NULL
+4;Spring MVC;NULL
+5;AngularJS;NULL
+6;Bootstrap;NULL
+7;MySQL;NULL
+8;Java;NULL
+9;Spring;NULL
+10;Hazelcast;NULL
+11;LMAX;NULL
+12;RabbitMQ;NULL
+13;Wicket;NULL
+14;Greenplum;NULL
+15;Activiti;NULL
+16;MSSQL;NULL
+17;PostgreSQL;NULL
+18;EclipseLink;NULL
+19;Oracle;NULL
+20;Struts;NULL

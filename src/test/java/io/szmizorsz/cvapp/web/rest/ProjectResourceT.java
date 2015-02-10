@@ -95,40 +95,34 @@ public class ProjectResourceT {
     @Before
     public void initTest() {
         project = new Project();
-        project.setName(DEFAULT_NAME);
-        project.setDescription(DEFAULT_DESCRIPTION);
-        project.setRole(DEFAULT_ROLE);
-        project.setClient(DEFAULT_CLIENT);
+        project.setNameEn(DEFAULT_NAME);
+        project.setDescriptionEn(DEFAULT_DESCRIPTION);
+        project.setClientEn(DEFAULT_CLIENT);
         project.setStart(DEFAULT_START);
         project.setEnd(DEFAULT_END);
-        project.setNote(DEFAULT_NOTE);
         
         firstCompany = new Company();
-        firstCompany.setName(FIRST_COMPANY_NAME);
-        firstCompany.setDescription(DEFAULT_DESCRIPTION);       
+        firstCompany.setNameEn(FIRST_COMPANY_NAME);
+        firstCompany.setDescriptionEn(DEFAULT_DESCRIPTION);       
 
         firstProject = new Project();
-        firstProject.setName(FIRST_PROJECT_NAME);
-        firstProject.setDescription(DEFAULT_DESCRIPTION);
-        firstProject.setRole(DEFAULT_ROLE);
-        firstProject.setClient(DEFAULT_CLIENT);
+        firstProject.setNameEn(FIRST_PROJECT_NAME);
+        firstProject.setDescriptionEn(DEFAULT_DESCRIPTION);
+        firstProject.setClientEn(DEFAULT_CLIENT);
         firstProject.setStart(DEFAULT_START);
         firstProject.setEnd(DEFAULT_END);
-        firstProject.setNote(DEFAULT_NOTE);      
         firstProject.setCompany(firstCompany);
         
         secondCompany = new Company();
-        secondCompany.setName(SECOND_COMPANY_NAME);
-        secondCompany.setDescription(DEFAULT_DESCRIPTION);
+        secondCompany.setNameEn(SECOND_COMPANY_NAME);
+        secondCompany.setDescriptionEn(DEFAULT_DESCRIPTION);
         
         secondProject = new Project();
-        secondProject.setName(SECOND_PROJECT_NAME);
-        secondProject.setDescription(DEFAULT_DESCRIPTION);
-        secondProject.setRole(DEFAULT_ROLE);
-        secondProject.setClient(DEFAULT_CLIENT);
+        secondProject.setNameEn(SECOND_PROJECT_NAME);
+        secondProject.setDescriptionEn(DEFAULT_DESCRIPTION);
+        secondProject.setClientEn(DEFAULT_CLIENT);
         secondProject.setStart(DEFAULT_START);
         secondProject.setEnd(DEFAULT_END);
-        secondProject.setNote(DEFAULT_NOTE);       
         secondProject.setCompany(secondCompany);
     }
 
@@ -148,13 +142,12 @@ public class ProjectResourceT {
         List<Project> projects = projectRepository.findAll();
         assertThat(projects).hasSize(1);
         Project testProject = projects.iterator().next();
-        assertThat(testProject.getName()).isEqualTo(DEFAULT_NAME);
-        assertThat(testProject.getDescription()).isEqualTo(DEFAULT_DESCRIPTION);
-        assertThat(testProject.getRole()).isEqualTo(DEFAULT_ROLE);
-        assertThat(testProject.getClient()).isEqualTo(DEFAULT_CLIENT);
+        assertThat(testProject.getNameEn()).isEqualTo(DEFAULT_NAME);
+        assertThat(testProject.getDescriptionEn()).isEqualTo(DEFAULT_DESCRIPTION);
+        assertThat(testProject.getClientEn()).isEqualTo(DEFAULT_CLIENT);
         assertThat(testProject.getStart()).isEqualTo(DEFAULT_START);
         assertThat(testProject.getEnd()).isEqualTo(DEFAULT_END);
-        assertThat(testProject.getNote()).isEqualTo(DEFAULT_NOTE);
+        
     }
 
     @Test
@@ -240,13 +233,11 @@ public class ProjectResourceT {
         projectRepository.saveAndFlush(project);
 
         // Update the project
-        project.setName(UPDATED_NAME);
-        project.setDescription(UPDATED_DESCRIPTION);
-        project.setRole(UPDATED_ROLE);
-        project.setClient(UPDATED_CLIENT);
+        project.setNameEn(UPDATED_NAME);
+        project.setDescriptionEn(UPDATED_DESCRIPTION);
+        project.setClientEn(UPDATED_CLIENT);
         project.setStart(UPDATED_START);
         project.setEnd(UPDATED_END);
-        project.setNote(UPDATED_NOTE);
         restProjectMockMvc.perform(post("/app/rest/projects")
                 .contentType(TestUtil.APPLICATION_JSON_UTF8)
                 .content(TestUtil.convertObjectToJsonBytes(project)))
@@ -256,13 +247,12 @@ public class ProjectResourceT {
         List<Project> projects = projectRepository.findAll();
         assertThat(projects).hasSize(1);
         Project testProject = projects.iterator().next();
-        assertThat(testProject.getName()).isEqualTo(UPDATED_NAME);
-        assertThat(testProject.getDescription()).isEqualTo(UPDATED_DESCRIPTION);
-        assertThat(testProject.getRole()).isEqualTo(UPDATED_ROLE);
-        assertThat(testProject.getClient()).isEqualTo(UPDATED_CLIENT);
+        assertThat(testProject.getNameEn()).isEqualTo(UPDATED_NAME);
+        assertThat(testProject.getDescriptionEn()).isEqualTo(UPDATED_DESCRIPTION);
+        assertThat(testProject.getClientEn()).isEqualTo(UPDATED_CLIENT);
         assertThat(testProject.getStart()).isEqualTo(UPDATED_START);
         assertThat(testProject.getEnd()).isEqualTo(UPDATED_END);
-        assertThat(testProject.getNote()).isEqualTo(UPDATED_NOTE);;
+        
     }
 
     @Test
