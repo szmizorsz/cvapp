@@ -1,9 +1,43 @@
 <div>
 
-    <h2>Others</h2>
+    <h2 translate="data.other.header">Others</h2>
+
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th translate="data.other.categoryEn">CategoryEn</th>
+                    <th translate="data.other.categoryHu">CategoryHu</th>
+                    <th translate="data.other.descriptionEn">DescriptionEn</th>
+                    <th translate="data.other.descriptionHu">DescriptionHu</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="other in others">
+                    <td>{{other.categoryEn}}</td>
+                    <td>{{other.categoryHu}}</td>
+                    <td>{{other.descriptionEn}}</td>
+                    <td>{{other.descriptionHu}}</td>
+                    <td>
+                        <button type="submit"
+                                ng-click="update(other.id)"
+                                class="btn btn-default">
+                            <span class="glyphicon glyphicon-pencil"></span> <span translate="global.label.edit">Edit</span>
+                        </button>
+                        <button type="submit"
+                                ng-click="delete(other.id)"
+                                class="btn btn-danger">
+                            <span class="glyphicon glyphicon-remove-circle"></span> <span translate="global.label.delete">Delete</span>
+                        </button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 
     <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#saveOtherModal" ng-click="clear()">
-        <span class="glyphicon glyphicon-flash"></span> Create a new Other
+        <span class="glyphicon glyphicon-flash"></span> <span translate="global.label.create">Create</span>
     </button>
     <div class="modal fade" id="saveOtherModal" tabindex="-1" role="dialog" aria-labelledby="myOtherLabel"
          aria-hidden="true">
@@ -16,32 +50,26 @@
                     <div class="modal-header">
                         <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
                                 ng-click="clear()">&times;</button>
-                        <h4 class="modal-title" id="myOtherLabel">Create or edit a Other</h4>
+                        <h4 class="modal-title" id="myOtherLabel" translate="global.label.createoredit">Create or edit</h4>
                     </div>
                     <div class="modal-body">
                         <div class="form-group">
-                            <label>ID</label>
-                            <input type="text" class="form-control" name="id"
-                                   ng-model="other.id" readonly>
-                        </div>
-
-                        <div class="form-group">
-                            <label>CategoryEn</label>
+                            <label translate="data.other.categoryEn">CategoryEn</label>
                             <input type="text" class="form-control"
                                    ng-model="other.categoryEn">
                         </div>
                         <div class="form-group">
-                            <label>CategoryHu</label>
+                            <label translate="data.other.categoryHu">CategoryHu</label>
                             <input type="text" class="form-control"
                                    ng-model="other.categoryHu">
                         </div>
                         <div class="form-group">
-                            <label>DescriptionEn</label>
+                            <label translate="data.other.descriptionEn">DescriptionEn</label>
                             <input type="text" class="form-control"
                                    ng-model="other.descriptionEn">
                         </div>
                         <div class="form-group">
-                            <label>DescriptionHu</label>
+                            <label translate="data.other.descriptionHu">DescriptionHu</label>
                             <input type="text" class="form-control"
                                    ng-model="other.descriptionHu">
                         </div>
@@ -50,10 +78,10 @@
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="clear()">
-                            <span class="glyphicon glyphicon-ban-circle"></span> Cancel
+                            <span class="glyphicon glyphicon-ban-circle"></span> <span translate="global.label.cancel">Cancel</span>
                         </button>
                         <button type="submit" ng-disabled="form.$invalid" class="btn btn-primary">
-                            <span class="glyphicon glyphicon-save"></span> Save
+                            <span class="glyphicon glyphicon-save"></span> <span translate="global.label.save">Save</span>
                         </button>
                     </div>
                 </form>
@@ -61,39 +89,4 @@
         </div>
     </div>
 
-    <div class="table-responsive">
-        <table class="table table-striped">
-            <thead>
-                <tr>
-                    <th>ID</th>
-                    <th>CategoryEn</th>
-                    <th>CategoryHu</th>
-                    <th>DescriptionEn</th>
-                    <th>DescriptionHu</th>
-                    <th></th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr ng-repeat="other in others">
-                    <td>{{other.id}}</td>
-                    <td>{{other.categoryEn}}</td>
-                    <td>{{other.categoryHu}}</td>
-                    <td>{{other.descriptionEn}}</td>
-                    <td>{{other.descriptionHu}}</td>
-                    <td>
-                        <button type="submit"
-                                ng-click="update(other.id)"
-                                class="btn btn-default">
-                            <span class="glyphicon glyphicon-pencil"></span> Edit
-                        </button>
-                        <button type="submit"
-                                ng-click="delete(other.id)"
-                                class="btn btn-danger">
-                            <span class="glyphicon glyphicon-remove-circle"></span> Delete
-                        </button>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
 </div>

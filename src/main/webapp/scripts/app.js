@@ -95,7 +95,7 @@ cvappApp
                     }
                 })
                 .when('/logout', {
-                    templateUrl: 'views/pbulic.html',
+                    templateUrl: 'views/public.html',
                     controller: 'LogoutController',
                     access: {
                         authorizedRoles: [USER_ROLES.all]
@@ -138,7 +138,7 @@ cvappApp
                 suffix: '.json'
             });
 
-            $translateProvider.preferredLanguage('en');
+            $translateProvider.preferredLanguage('hu');
 
             $translateProvider.useCookieStorage();
 

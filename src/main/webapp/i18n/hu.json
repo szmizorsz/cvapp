@@ -5,7 +5,14 @@
         "menu": {
             "home": "Kezdőlap",
             "entities": {
-                "main": "Adatok"
+                "main": "Adatok",
+                "company": "Cégek",                
+                "project": "Projektek",
+                "technology": "Technológiák",
+                "education": "Tanulmányok",
+                "language": "Nyelvismeret",
+                "knowledge": "Szakmai ismeret",
+                "other": "Egyéb"
             },
             "account": {
                 "main": "Account",
@@ -13,10 +20,10 @@
                 "password": "Jelszó",
                 "sessions": "Sessions",
                 "tracker": "User tracker",
-                "metrics": "Metrics",
-                "health": "Health",
-                "logs": "Logs",
-                "audits": "Audits",
+                "metrics": "Metrikák",
+                "health": "Indikátorok",
+                "logs": "Log szintek",
+                "audits": "Audit log",
                 "login": "Bejelentkezés",
                 "logout": "Kijelentkezés",
                 "apidocs": "API",
@@ -26,42 +33,75 @@
             "language": "Nyelv"
         },
         "form": {
-            "username": "Login",
-            "username.placeholder": "Your login",
-            "newpassword": "New password",
-            "newpassword.placeholder": "New password",
-            "confirmpassword": "New password confirmation",
-            "confirmpassword.placeholder": "Confirm the new password",
+            "username": "Felhasználónév",
+            "username.placeholder": "Írja be felhasználónevét",
+            "newpassword": "Jelszó",
+            "newpassword.placeholder": "Jelszó megadása",
+            "confirmpassword": "Jelszó megerősítés",
+            "confirmpassword.placeholder": "Adja meg jelszavát még egyszer",
             "email": "E-mail",
-            "email.placeholder": "Your e-mail"
+            "email.placeholder": "Adja meg e-mail címét"
         },
+        "label": {
+            "edit": " Módosít",
+            "delete": " Töröl",
+            "cancel": " Mégse",
+            "create": " Hozzáad ",
+            "createoredit": " Szerkesztés ",            
+            "save": " Mentés"
+        }, 
         "messages": {
             "info": {
                 "authenticated": "If you want to <a href=\"#/login\">authenticate</a>, you can try the default accounts:<br/>- Administrator (login=\"admin\" and password=\"admin\") <br/>- User (login=\"user\" and password=\"user\").",
-                "register": "You don't have an account yet? <a href=\"#/register\">Register a new account</a>"
+                "register": "Még nincs accountja? <a href=\"#/register\" class=\"dark-blue\">Regisztrálás</a>"
             },
             "error": {
-                "dontmatch" : "The password and its confirmation do not match!"
+                "dontmatch" : "Jelszó és megerősítése nem egyezik meg!"
             },
             "validate": {
                 "newpassword": {
-                    "required": "Your password is required.",
-                    "minlength": "Your password is required to be at least 5 characters",
-                    "maxlength": "Your password cannot be longer than 50 characters",
-                    "strength": "Password strength:"
+                    "required": "Jelszó megadása kötelező",
+                    "minlength": "Jelszó legalább 5 karakter kell legyen",
+                    "maxlength": "Jelszó nem lehet hosszabb 50 karakternél",
+                    "strength": "Jelszó erősség:"
                 },
                 "confirmpassword": {
-                    "required": "Your confirmation password is required.",
-                    "minlength": "Your confirmation password is required to be at least 5 characters",
-                    "maxlength": "Your confirmation password cannot be longer than 50 characters"
+                    "required": "Jelszó megerősítése kötelező",
+                    "minlength": "Jelszó legalább 5 karakter kell legyen",
+                    "maxlength": "Jelszó nem lehet hosszabb 50 karakternéls"
                 },
                 "email": {
-                    "required": "Your e-mail is required.",
-                    "invalid": "Your e-mail is invalid.",
-                    "minlength": "Your e-mail is required to be at least 5 characters",
-                    "maxlength": "Your e-mail cannot be longer than 50 characters"
+                    "required": "E-mail megadása kötelező",
+                    "invalid": "Érvénytelen e-mail cím",
+                    "minlength": "E-mail cím legalább 5 karakter kell legyen",
+                    "maxlength": "E-mail cím nem lehet hosszabb 50 karakternél"
                 }
             }
+        }
+    },
+    "public": {
+        "header" : {
+            "maintitle": "Curriculum Vitae",
+            "motto": "Online CV karbantartó alkalmazás, kettős céllal",
+            "purpose.publish": "Életrajzom publikálása",
+            "experience": "Szakmai tapasztalat",
+            "education": "Tanulmányok",
+            "motivation": "Motiváció",
+            "purpose.techexperience": "Technológia ismereteim bővítése",
+            "techfirstline": "Java2EE, Spring, NoSQL",
+            "techsecondline": "AngularJS, Bootstrap",
+            "techthirdline": "JHipster, Cloud Foundry"            
+        },
+        "body" : {
+            "experience": "Szakmai tapasztalat",
+            "experience.projectheader": "Az alábbi konkrét projektekben való részvétel:",
+            "experience.technologyHeader": "Technológiák:",            
+            "education": "Tanulmányok, Képzések, Szakmai ismeret",
+            "motivation": "Motiváció",
+            "relevantknowledge": "Szakmai ismeretek",
+            "languageskills": "Nyelvtudás",
+            "others": "Egyéb",            
+            "about": "CV App alkalmazásról"            
         }
     },
     "main": {
@@ -81,93 +121,87 @@
         "github": "Github"
     },
     "activate": {
-        "title": "Activation",
+        "title": "Aktiválás",
         "messages": {
-            "success": "<strong>Your user has been activated.</strong> Please <a href=\"#/login\">authenticate</a>.",
-            "error": "<strong>Your user could not be activated.</strong> Please use the registration form to sign up."
+            "success": "<strong>Felhasználója aktiválva lett.</strong> <a href=\"#/login\" class=\"dark-blue\">Bejelentkezés</a>.",
+            "error": "<strong>Felhasználóját nem tudtuk aktiválni.</strong> Kérjük, használja a regisztrációs <a href=\"#/register\" class=\"dark-blue\">űrlapot</a>."
         }
     },
     "register": {
-        "title": "Registration",
+        "title": "Regisztrálás",
         "form": {
-            "button": "Register"
+            "button": "Regisztrálás"
         },
         "messages": {
             "validate": {
                 "login": {
-                    "required": "Your login is required.",
-                    "minlength": "Your login is required to be at least 1 character",
-                    "maxlength": "Your login cannot be longer than 50 characters"
+                    "required": "Felhasználónév kötelező",
+                    "minlength": "Jelszó legalább 5 karakter kell legyen",
+                    "maxlength": "Felhasználónév nem lehet hosszabb 50 karakternél"
                 }
             },
-            "success": "<strong>Registration saved!</strong> Please check your email for confirmation.",
+            "success": "<strong>Regisztrációja rögzítve lett!</strong> A megadott email címre kiküldött levéllel aktiválhatja.",
             "error": {
-                "fail": "<strong>Registration failed!</strong> Please try again later.",
-                "userexists": "<strong>Login name already registered!</strong> Please choose another one."
+                "fail": "<strong>Sikertelen regisztráció!</strong> Próbálja meg később!",
+                "userexists": "<strong>Ez a felhasználónév már foglalt!</strong> Válasszon másikat!"
             }
         }
     },
     "login": {
         "title": "Authentication",
         "form": {
-            "password": "Password",
-            "password.placeholder": "Your password",
+            "password": "Jelszó",
+            "password.placeholder": "Írja be Jelszavát",
             "rememberme": "Automatic Login",
-            "button": "Authenticate"
+            "button": "Bejelentkezés"
         },
         "messages": {
             "error": {
-                "authentication": "<strong>Authentication failed!</strong> Please check your credentials and try again."
+                "authentication": "<strong>Sikertelen bejelentkezés!</strong> Kérem ellenőrizze az adatokat!"
             }
         }
     },
     "settings": {
-        "title": "User settings for [<b>{{username}}</b>]",
+        "title": "<b>{{username}}</b> felhasználó adatai",
         "form": {
-            "firstname": "First Name",
-            "firstname.placeholder": "Your first name",
-            "lastname": "Last Name",
-            "lastname.placeholder": "Your last name",
-            "button": "Save"
+            "firstname": "Keresztnév",
+            "firstname.placeholder": "Keresztneve",
+            "lastname": "Vezetéknév",
+            "lastname.placeholder": "Vezetékneve"
         },
         "messages": {
-            "error": "<strong>An error has occurred!</strong> Settings could not be saved.",
-            "success": "<strong>Settings saved!</strong>",
+            "error": "<strong>Hiba történt!</strong>",
+            "success": "<strong>Beállítások sikeresen mentve!</strong>",
             "validate": {
                 "firstname": {
-                    "required": "Your first name is required.",
-                    "minlength": "Your first name is required to be at least 1 character",
-                    "maxlength": "Your first name cannot be longer than 50 characters"
+                    "minlength": "Keresztneve legalább 1 karakter kell legyen",
+                    "maxlength": "Keresztneve nem lehet hosszabb 50 karakternél"
                 },
                 "lastname": {
-                    "required": "Your last name is required.",
-                    "minlength": "Your last name is required to be at least 1 character",
-                    "maxlength": "Your last name cannot be longer than 50 characters"
+                    "minlength": "Vezetékneve legalább 1 karakter kell legyen",
+                    "maxlength": "Vezetékneve nem lehet hosszabb 50 karakternél"
                 }
             }
         }
     },
     "password": {
-        "title": "Password for [<b>{{username}}</b>]",
-        "form": {
-            "button": "Save"
-        },
+        "title": "Új jelszó megadása <b>{{username}}</b> számára",
         "messages": {
-            "error":  "<strong>An error has occurred!</strong> The password could not be changed.",
-            "success": "<strong>Password changed!</strong>"
+            "error":  "<strong>Hiba történt!</strong>",
+            "success": "<strong>Jelszava megváltozott!</strong>"
         }
     },
     "sessions": {
-        "title": "Active sessions for [<b>{{username}}</b>]",
+        "title": "<b>{{username}}</b> aktív session-jei",
         "table": {
-            "ipaddress": "IP address",
+            "ipaddress": "IP cím",
             "useragent": "User Agent",
-            "date": "Date",
-            "button": "Invalidate"
+            "date": "Dátum",
+            "button": "Invalidálás"
         },
         "messages": {
-            "success": "<strong>Session invalidated!</strong>",
-            "error": "<strong>An error has occurred!</strong> The session could not be invalidated."
+            "success": "<strong>Session invalidálva!</strong>",
+            "error": "<strong>Hiba történt!</strong>"
         }
     },
     "tracker": {
@@ -181,8 +215,8 @@
         }
     },
     "metrics": {
-        "title": "Application Metrics",
-        "refresh.button": "Refresh",
+        "title": "Alkalmazás metrikák",
+        "refresh.button": "Frissítés",
         "updating": "Updating...",
         "jvm": {
             "title": "JVM Metrics",
@@ -261,17 +295,17 @@
         }
     },
     "health": {
-        "title": "Health checks",
-        "refresh.button": "Refresh",
+        "title": "Szolgáltatás állapot indikátorok",
+        "refresh.button": "Frissítés",
         "stacktrace": "Stacktrace",
         "indicator": {
-            "db": "Database",
+            "db": "MySQL DB",
             "mail": "Email",
             "mongo": "Mongo DB"
         },
         "table": {
-            "service": "Service name",
-            "status": "Status"
+            "service": "Szolgáltatás",
+            "status": "Státusz"
         },
         "status": {
             "UP": "UP",
@@ -279,20 +313,20 @@
         }
     },
     "logs": {
-        "title": "Logs",
-        "nbloggers": "There are {{ total }} loggers.",
-        "filter": "Filter",
+        "title": "Logolási szintek",
+        "nbloggers": "{{ total }} logger található",
+        "filter": "Szűrés",
         "table": {
-            "name": "Name",
-            "level": "Level"
+            "name": "Név",
+            "level": "Szint"
         }
     },
     "audits": {
-        "title": "Audits",
+        "title": "Audit log események",
         "filter": {
-            "title": "Filter per date",
-            "from": "from",
-            "to": "to",
+            "title": "Nap szerinti szűkítés",
+            "from": "Kezdő dátum",
+            "to": "Vég dátum",
             "button": {
                 "weeks": "Weeks",
                 "today": "today",
@@ -302,10 +336,10 @@
         },
         "table": {
             "header": {
-                "principal": "User",
-                "date": "Date",
-                "status": "State",
-                "data": "Extra data"
+                "principal": "Felhasználó",
+                "date": "Dátum",
+                "status": "Státusz",
+                "data": "További adatok"
             },
             "data": {
                 "remoteAddress": "Remote Address:"
@@ -317,5 +351,61 @@
         "title": "Error page!",
         "403": "You are not authorized to access the page."
     },
-    "footer": "This is your footer"
+    "data": {
+        "company": {
+                "header" : "Cégek",
+                "nameEn" : "Név(En)",
+                "nameHu" : "Név(Hu)",
+                "descriptionEn" : "Leírás(En)",
+                "descriptionHu" : "Leírás(Hu)",
+                "periodEn" : "Időszak(En)",
+                "periodHu" : "Időszak(Hu)"
+            },
+        "project": {
+                "header" : "Projektek",
+                "nameEn" : "Név(En)",
+                "nameHu" : "Név(Hu)",
+                "descriptionEn" : "Leírás(En)",
+                "descriptionHu" : "Leírás(Hu)",
+                "clientEn" : "Ügyfél(En)",
+                "clientHu" : "Ügyfél(Hu)",
+                "start" : "Kezdete",
+                "end" : "Vége",
+                "technology" : "Technológiák",
+                "company" : "Cég"
+            },
+        "technology": {
+                "header" : "Technológiák",
+                "name" : "Név",
+                "description" : "Leírás"
+            },
+        "education": {
+                "header" : "Tanulmányok",
+                "descriptionEn" : "Leírás(En)",
+                "descriptionHu" : "Leírás(Hu)",
+                "periodEn" : "Időszak(En)",
+                "periodHu" : "Időszak(Hu)"
+            },
+        "language": {
+                "header" : "Nyelvtudás",
+                "nameEn" : "Nyelv(En)",
+                "nameHu" : "Nyelv(Hu)",
+                "levelEn" : "Szint(En)",
+                "levelHu" : "Szint(Hu)"
+            },
+        "other": {
+                "header" : "Hobbi és egyéb ismeretek",
+                "categoryEn" : "Kategória(En)",
+                "categoryHu" : "Kategória(Hu)",
+                "descriptionEn" : "Leírás(En)",
+                "descriptionHu" : "Leírás(Hu)"
+            },
+        "knowledge": {
+                "header" : "Szakmai ismeretek",
+                "categoryEn" : "Kategória(En)",
+                "categoryHu" : "Kategória(Hu)",
+                "detailsEn" : "Részeletek(En)",
+                "detailsHu" : "Részeletek(Hu)"
+            }
+    }
 }

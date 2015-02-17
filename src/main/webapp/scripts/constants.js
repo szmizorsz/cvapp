@@ -12,8 +12,12 @@ cvappApp.constant('USER_ROLES', {
 Languages codes are ISO_639-1 codes, see http://en.wikipedia.org/wiki/List_of_ISO_639-1_codes
 They are written in English to avoid character encoding issues (not a perfect solution)
 */
-cvappApp.constant('LANGUAGES', {
+cvappApp.constant('LANGUAGES_EN', {
         'en': 'English',
         'hu': 'Hungarian',
-        'fr': 'French'
+    });
+
+cvappApp.constant('LANGUAGES_HU', {
+        'en': 'Angol',
+        'hu': 'Magyar',
     });

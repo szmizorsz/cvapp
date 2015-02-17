@@ -1,9 +1,47 @@
 <div>
 
-    <h2>Companys</h2>
+    <h2 translate="data.company.header">Companys</h2>
+
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th translate="data.company.nameEn">NameEn</th>
+                    <th translate="data.company.nameHu">NameHu</th>
+                    <th translate="data.company.periodEn">PeriodEn</th>
+                    <th translate="data.company.periodHu">PeriodHu</th>
+                    <th translate="data.company.descriptionEn">DescriptionEn</th>
+                    <th translate="data.company.descriptionHu">DescriptionHu</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="company in companys">
+                    <td>{{company.nameEn}}</td>
+                    <td>{{company.nameHu}}</td>
+                    <td>{{company.periodEn}}</td>
+                    <td>{{company.periodHu}}</td>
+                    <td>{{company.descriptionEn}}</td>
+                    <td>{{company.descriptionHu}}</td>
+                    <td>
+                        <button type="submit"
+                                ng-click="update(company.id)"
+                                class="btn btn-default">
+                            <span class="glyphicon glyphicon-pencil"></span><span translate="global.label.edit">Edit</span>
+                        </button>
+                        <button type="submit"
+                                ng-click="delete(company.id)"
+                                class="btn btn-danger">
+                            <span class="glyphicon glyphicon-remove-circle"></span><span translate="global.label.delete">Delete</span>
+                        </button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 
     <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#saveCompanyModal" ng-click="clear()">
-        <span class="glyphicon glyphicon-flash"></span> Create a new Company
+        <span class="glyphicon glyphicon-flash"></span><span translate="global.label.create">Create</span>
     </button>
     <div class="modal fade" id="saveCompanyModal" tabindex="-1" role="dialog" aria-labelledby="myCompanyLabel"
          aria-hidden="true">
@@ -16,42 +54,36 @@
                     <div class="modal-header">
                         <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
                                 ng-click="clear()">&times;</button>
-                        <h4 class="modal-title" id="myCompanyLabel">Create or edit a Company</h4>
+                        <h4 class="modal-title" id="myCompanyLabel" translate="global.label.createoredit">Create or edit</h4>
                     </div>
-                    <div class="modal-body">
+                    <div class="modal-body">                        
                         <div class="form-group">
-                            <label>ID</label>
-                            <input type="text" class="form-control" name="id"
-                                   ng-model="company.id" readonly>
-                        </div>
-
-                        <div class="form-group">
-                            <label>NameEn</label>
+                            <label translate="data.company.nameEn">NameEn</label>
                             <input type="text" class="form-control"
                                    ng-model="company.nameEn">
                         </div>
                         <div class="form-group">
-                            <label>NameHu</label>
+                            <label translate="data.company.nameHu">NameHu</label>
                             <input type="text" class="form-control"
                                    ng-model="company.nameHu">
                         </div>
                         <div class="form-group">
-                            <label>PeriodEn</label>
+                            <label translate="data.company.periodEn">PeriodEn</label>
                             <input type="text" class="form-control"
                                    ng-model="company.periodEn">
                         </div>
                         <div class="form-group">
-                            <label>PeriodHu</label>
+                            <label translate="data.company.periodHu">PeriodHu</label>
                             <input type="text" class="form-control"
                                    ng-model="company.periodHu">
                         </div>
                         <div class="form-group">
-                            <label>DescriptionEn</label>
+                            <label translate="data.company.descriptionEn">DescriptionEn</label>
                             <input type="text" class="form-control"
                                    ng-model="company.descriptionEn">
                         </div>
                         <div class="form-group">
-                            <label>DescriptionHu</label>
+                            <label translate="data.company.descriptionHu">DescriptionHu</label>
                             <input type="text" class="form-control"
                                    ng-model="company.descriptionHu">
                         </div>
@@ -59,10 +91,10 @@
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="clear()">
-                            <span class="glyphicon glyphicon-ban-circle"></span> Cancel
+                            <span class="glyphicon glyphicon-ban-circle"></span><span translate="global.label.cancel">Cancel</span>
                         </button>
                         <button type="submit" ng-disabled="form.$invalid" class="btn btn-primary">
-                            <span class="glyphicon glyphicon-save"></span> Save
+                            <span class="glyphicon glyphicon-save"></span><span translate="global.label.save">Save</span>
                         </button>
                     </div>
                 </form>
@@ -70,43 +102,4 @@
         </div>
     </div>
 
-    <div class="table-responsive">
-        <table class="table table-striped">
-            <thead>
-                <tr>
-                    <th>ID</th>
-                    <th>NameEn</th>
-                    <th>NameHu</th>
-                    <th>PeriodEn</th>
-                    <th>PeriodHu</th>
-                    <th>DescriptionEn</th>
-                    <th>DescriptionHu</th>
-                    <th></th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr ng-repeat="company in companys">
-                    <td>{{company.id}}</td>
-                    <td>{{company.nameEn}}</td>
-                    <td>{{company.nameHu}}</td>
-                    <td>{{company.periodEn}}</td>
-                    <td>{{company.periodHu}}</td>
-                    <td>{{company.descriptionEn}}</td>
-                    <td>{{company.descriptionHu}}</td>
-                    <td>
-                        <button type="submit"
-                                ng-click="update(company.id)"
-                                class="btn btn-default">
-                            <span class="glyphicon glyphicon-pencil"></span> Edit
-                        </button>
-                        <button type="submit"
-                                ng-click="delete(company.id)"
-                                class="btn btn-danger">
-                            <span class="glyphicon glyphicon-remove-circle"></span> Delete
-                        </button>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
 </div>

@@ -1,5 +1,7 @@
 package io.szmizorsz.cvapp.config;
 
+import java.util.Properties;
+
 import org.apache.commons.lang.CharEncoding;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -18,12 +20,14 @@ public class ThymeleafConfiguration {
     @Bean
     @Description("Thymeleaf template resolver serving HTML 5 emails")
     public ClassLoaderTemplateResolver emailTemplateResolver() {
+    	log.info("loading thymeleaf template resolver");
         ClassLoaderTemplateResolver emailTemplateResolver = new ClassLoaderTemplateResolver();
         emailTemplateResolver.setPrefix("mails/");
         emailTemplateResolver.setSuffix(".html");
         emailTemplateResolver.setTemplateMode("HTML5");
         emailTemplateResolver.setCharacterEncoding(CharEncoding.UTF_8);
         emailTemplateResolver.setOrder(1);
+        emailTemplateResolver.initialize();
         return emailTemplateResolver;
     }
 

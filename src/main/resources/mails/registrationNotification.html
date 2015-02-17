@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title th:text="#{email.registration.notification.title}">CVApp regisztráció</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    </head>
+    <body>
+        <p th:text="#{email.registration.notification.text(${user.login}, ${user.email})}">
+            CV App registration
+        </p>
+    </body>
+</html>

@@ -5,7 +5,14 @@
         "menu": {
             "home": "Home",
             "entities": {
-                "main": "Entities"
+                "main": "Data",
+                "company": "Company",
+                "project": "Project",
+                "technology": "Technology",
+                "education": "Education",
+                "language": "Language",
+                "knowledge": "Knowledge",
+                "other": "Other"
             },
             "account": {
                 "main": "Account",
@@ -15,30 +22,38 @@
                 "tracker": "User tracker",
                 "metrics": "Metrics",
                 "health": "Health",
-                "logs": "Logs",
-                "audits": "Audits",
-                "login": "Authenticate",
-                "logout": "Log out",
+                "logs": "Log levels",
+                "audits": "Audit logs",
+                "login": "Log In",
+                "logout": "Log Out",
                 "apidocs": "API",
                 "register": "Register"
             },
-            "admin": "Administration",
+            "admin": "Admin",
             "language": "Language"
         },
         "form": {
-            "username": "Login",
-            "username.placeholder": "Your login",
-            "newpassword": "New password",
-            "newpassword.placeholder": "New password",
-            "confirmpassword": "New password confirmation",
-            "confirmpassword.placeholder": "Confirm the new password",
+            "username": "Userrname",
+            "username.placeholder": "Your username",
+            "newpassword": "Password",
+            "newpassword.placeholder": "Password",
+            "confirmpassword": "Password confirmation",
+            "confirmpassword.placeholder": "Confirm the password",
             "email": "E-mail",
             "email.placeholder": "Your e-mail"
+        },
+        "label": {
+            "edit": " Edit",
+            "delete": " Delete",
+            "cancel": " Cancel",
+            "create": " Create ",
+            "createoredit": " Create or Edit ",
+            "save": " Save"
         },
         "messages": {
             "info": {
                 "authenticated": "If you want to <a href=\"#/login\">authenticate</a>, you can try the default accounts:<br/>- Administrator (login=\"admin\" and password=\"admin\") <br/>- User (login=\"user\" and password=\"user\").",
-                "register": "You don't have an account yet? <a href=\"#/register\">Register a new account</a>"
+                "register": "You don't have an account yet? <a href=\"#/register\" class=\"dark-blue\">Register</a>"
             },
             "error": {
                 "dontmatch" : "The password and its confirmation do not match!"
@@ -64,6 +79,31 @@
             }
         }
     },
+    "public": {
+        "header" : {
+            "maintitle": "Curriculum Vitae",
+            "motto": "Online CV maintenance app with two Goals",
+            "purpose.publish": "Publish my CV",
+            "experience": "Relevant experience",
+            "education": "Education, Knowledge",
+            "motivation": "Motivation",
+            "purpose.techexperience": "Play with cutting edge technologies",
+            "techfirstline": "Java2EE, Spring, NoSQL",
+            "techsecondline": "AngularJS, Bootstrap",
+            "techthirdline": "JHipster, Cloud Foundry"            
+        },
+        "body" : {
+            "experience": "Relevant experience",
+            "experience.projectheader": "Delivered projects:",
+            "experience.technologyHeader": "Technologies:",
+            "education": "Education, Knowledge",
+            "motivation": "Motivation",
+            "relevantknowledge": "Relevant knowledge",
+            "languageskills": "Language skills",
+            "others": "Other experience",
+            "about": "About CV application"            
+        }
+    },
     "main": {
         "title": "Welcome, Java Hipster!",
         "subtitle": "This is your homepage",
@@ -83,8 +123,8 @@
     "activate": {
         "title": "Activation",
         "messages": {
-            "success": "<strong>Your user has been activated.</strong> Please <a href=\"#/login\">authenticate</a>.",
-            "error": "<strong>Your user could not be activated.</strong> Please use the registration form to sign up."
+            "success": "<strong>Your user has been activated.</strong> <a href=\"#/login\" class=\"dark-blue\">Log In</a>",
+            "error": "<strong>Your user could not be activated.</strong> Please, use the registration form to  <a href=\"#/register\" class=\"dark-blue\"> sign up. </a>"
         }
     },
     "register": {
@@ -113,7 +153,7 @@
             "password": "Password",
             "password.placeholder": "Your password",
             "rememberme": "Automatic Login",
-            "button": "Authenticate"
+            "button": "Log In"
         },
         "messages": {
             "error": {
@@ -122,7 +162,7 @@
         }
     },
     "settings": {
-        "title": "User settings for [<b>{{username}}</b>]",
+        "title": "User settings for <b>{{username}}</b>",
         "form": {
             "firstname": "First Name",
             "firstname.placeholder": "Your first name",
@@ -148,7 +188,7 @@
         }
     },
     "password": {
-        "title": "Password for [<b>{{username}}</b>]",
+        "title": "Password for <b>{{username}}</b>",
         "form": {
             "button": "Save"
         },
@@ -158,7 +198,7 @@
         }
     },
     "sessions": {
-        "title": "Active sessions for [<b>{{username}}</b>]",
+        "title": "Active sessions for <b>{{username}}</b>",
         "table": {
             "ipaddress": "IP address",
             "useragent": "User Agent",
@@ -265,7 +305,7 @@
         "refresh.button": "Refresh",
         "stacktrace": "Stacktrace",
         "indicator": {
-            "db": "Database",
+            "db": "MySQL DB",
             "mail": "Email",
             "mongo": "Mongo DB"
         },
@@ -279,7 +319,7 @@
         }
     },
     "logs": {
-        "title": "Logs",
+        "title": "Log levels",
         "nbloggers": "There are {{ total }} loggers.",
         "filter": "Filter",
         "table": {
@@ -288,7 +328,7 @@
         }
     },
     "audits": {
-        "title": "Audits",
+        "title": "Audit event logs",
         "filter": {
             "title": "Filter per date",
             "from": "from",
@@ -304,7 +344,7 @@
             "header": {
                 "principal": "User",
                 "date": "Date",
-                "status": "State",
+                "status": "Status",
                 "data": "Extra data"
             },
             "data": {
@@ -317,5 +357,61 @@
         "title": "Error page!",
         "403": "You are not authorized to access the page."
     },
-    "footer": "This is your footer"
+    "data": {
+        "company": {
+                "header" : "Companies",
+                "nameEn" : "Name(En)",
+                "nameHu" : "Name(Hu)",
+                "descriptionEn" : "Description(En)",
+                "descriptionHu" : "Description(Hu)",
+                "periodEn" : "Period(En)",
+                "periodHu" : "Period(Hu)"
+            },
+        "project": {
+                "header" : "Projects",
+                "nameEn" : "Name(En)",
+                "nameHu" : "Name(Hu)",
+                "descriptionEn" : "Description(En)",
+                "descriptionHu" : "Description(Hu)",
+                "clientEn" : "Client(En)",
+                "clientHu" : "Client(Hu)",
+                "start" : "Start",
+                "end" : "End",
+                "technology" : "Technologies",
+                "company" : "Company"
+            },
+        "technology": {
+                "header" : "Technologies",
+                "name" : "Name",
+                "description" : "Description"
+            },
+        "education": {
+                "header" : "Educations",
+                "descriptionEn" : "Description(En)",
+                "descriptionHu" : "Description(Hu)",
+                "periodEn" : "Period(En)",
+                "periodHu" : "Period(Hu)"
+            },
+        "language": {
+                "header" : "Language skills",
+                "nameEn" : "Name(En)",
+                "nameHu" : "Name(Hu)",
+                "levelEn" : "Level(En)",
+                "levelHu" : "Level(Hu)"
+            },
+        "other": {
+                "header" : "Hobbies and other interests",
+                "categoryEn" : "Category(En)",
+                "categoryHu" : "Category(Hu)",
+                "descriptionEn" : "Description(En)",
+                "descriptionHu" : "Description(Hu)"
+            },
+        "knowledge": {
+                "header" : "Relevant knowledge",
+                "categoryEn" : "Category(En)",
+                "categoryHu" : "Category(Hu)",
+                "detailsEn" : "Details(En)",
+                "detailsHu" : "Details(Hu)"
+            }
+    }
 }

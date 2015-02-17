@@ -1,9 +1,43 @@
 <div>
 
-    <h2>Languagess</h2>
+    <h2 translate="data.language.header">Languagess</h2>
+
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th translate="data.language.nameEn">NameEn</th>
+                    <th translate="data.language.nameHu">NameHu</th>
+                    <th translate="data.language.levelEn">LevelEn</th>
+                    <th translate="data.language.levelHu">LevelHu</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="languages in languagess">
+                    <td>{{languages.nameEn}}</td>
+                    <td>{{languages.nameHu}}</td>
+                    <td>{{languages.levelEn}}</td>
+                    <td>{{languages.levelHu}}</td>
+                    <td>
+                        <button type="submit"
+                                ng-click="update(languages.id)"
+                                class="btn btn-default">
+                            <span class="glyphicon glyphicon-pencil"></span> <span translate="global.label.edit">Edit</span>
+                        </button>
+                        <button type="submit"
+                                ng-click="delete(languages.id)"
+                                class="btn btn-danger">
+                            <span class="glyphicon glyphicon-remove-circle"></span> <span translate="global.label.delete">Delete</span>
+                        </button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 
     <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#saveLanguagesModal" ng-click="clear()">
-        <span class="glyphicon glyphicon-flash"></span> Create a new Languages
+        <span class="glyphicon glyphicon-flash"></span> <span translate="global.label.create">Create</span>
     </button>
     <div class="modal fade" id="saveLanguagesModal" tabindex="-1" role="dialog" aria-labelledby="myLanguagesLabel"
          aria-hidden="true">
@@ -16,32 +50,26 @@
                     <div class="modal-header">
                         <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
                                 ng-click="clear()">&times;</button>
-                        <h4 class="modal-title" id="myLanguagesLabel">Create or edit a Languages</h4>
+                        <h4 class="modal-title" id="myLanguagesLabel" translate="global.label.createoredit">Create or edit</h4>
                     </div>
                     <div class="modal-body">
                         <div class="form-group">
-                            <label>ID</label>
-                            <input type="text" class="form-control" name="id"
-                                   ng-model="languages.id" readonly>
-                        </div>
-
-                        <div class="form-group">
-                            <label>NameEn</label>
+                            <label translate="data.language.nameEn">NameEn</label>
                             <input type="text" class="form-control"
                                    ng-model="languages.nameEn">
                         </div>
                         <div class="form-group">
-                            <label>NameHu</label>
+                            <label translate="data.language.nameHu">NameHu</label>
                             <input type="text" class="form-control"
                                    ng-model="languages.nameHu">
                         </div>
                         <div class="form-group">
-                            <label>LevelEn</label>
+                            <label translate="data.language.levelEn">LevelEn</label>
                             <input type="text" class="form-control"
                                    ng-model="languages.levelEn">
                         </div>
                         <div class="form-group">
-                            <label>LevelHu</label>
+                            <label translate="data.language.levelHu">LevelHu</label>
                             <input type="text" class="form-control"
                                    ng-model="languages.levelHu">
                         </div>
@@ -50,10 +78,10 @@
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="clear()">
-                            <span class="glyphicon glyphicon-ban-circle"></span> Cancel
+                            <span class="glyphicon glyphicon-ban-circle"></span> <span translate="global.label.cancel">Cancel</span>
                         </button>
                         <button type="submit" ng-disabled="form.$invalid" class="btn btn-primary">
-                            <span class="glyphicon glyphicon-save"></span> Save
+                            <span class="glyphicon glyphicon-save"></span> <span translate="global.label.save">Save</span>
                         </button>
                     </div>
                 </form>
@@ -61,39 +89,4 @@
         </div>
     </div>
 
-    <div class="table-responsive">
-        <table class="table table-striped">
-            <thead>
-                <tr>
-                    <th>ID</th>
-                    <th>NameEn</th>
-                    <th>NameHu</th>
-                    <th>LevelEn</th>
-                    <th>LevelHu</th>
-                    <th></th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr ng-repeat="languages in languagess">
-                    <td>{{languages.id}}</td>
-                    <td>{{languages.nameEn}}</td>
-                    <td>{{languages.nameHu}}</td>
-                    <td>{{languages.levelEn}}</td>
-                    <td>{{languages.levelHu}}</td>
-                    <td>
-                        <button type="submit"
-                                ng-click="update(languages.id)"
-                                class="btn btn-default">
-                            <span class="glyphicon glyphicon-pencil"></span> Edit
-                        </button>
-                        <button type="submit"
-                                ng-click="delete(languages.id)"
-                                class="btn btn-danger">
-                            <span class="glyphicon glyphicon-remove-circle"></span> Delete
-                        </button>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
 </div>

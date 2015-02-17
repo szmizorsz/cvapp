@@ -77,8 +77,10 @@ public class AccountResource {
                         userDTO.getFirstName(), userDTO.getLastName(), userDTO.getEmail().toLowerCase(),
                         userDTO.getLangKey());
                 final Locale locale = Locale.forLanguageTag(user.getLangKey());
-                String content = createHtmlContentFromTemplate(user, locale, request, response);
-                mailService.sendActivationEmail(user.getEmail(), content, locale);
+                String activationEmailContent = createHtmlContentFromTemplate(user, locale, request, response, "activationEmail");
+                mailService.sendActivationEmail(user.getEmail(), activationEmailContent, locale);
+                String registrationNotificationEmailContent = createHtmlContentFromTemplate(user, locale, request, response, "registrationNotification");
+                mailService.sendRegistrationNotificationEmail(registrationNotificationEmailContent, locale);
                 return new ResponseEntity<>(HttpStatus.CREATED);});
     }
     /**
@@ -88,11 +90,15 @@ public class AccountResource {
             method = RequestMethod.GET,
             produces = MediaType.APPLICATION_JSON_VALUE)
     @Timed
-    public ResponseEntity<String> activateAccount(@RequestParam(value = "key") String key) {
+    public ResponseEntity<String> activateAccount(@RequestParam(value = "key") String key, HttpServletRequest request,
+            HttpServletResponse response) {
         return Optional.ofNullable(userService.activateRegistration(key))
-            .map(user -> new ResponseEntity<String>(
-                    user.getLogin(),
-                    HttpStatus.OK))
+            .map(user -> {
+            	final Locale locale = Locale.forLanguageTag(user.getLangKey());
+                String activationNotificationEmailContent = createHtmlContentFromTemplate(user, locale, request, response, "activationNotification");
+                mailService.sendActivationNotificationEmail(activationNotificationEmailContent, locale);
+                
+            	return new ResponseEntity<String>(user.getLogin(),HttpStatus.OK);})
             .orElse(new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR));
     }
 
@@ -199,7 +205,7 @@ public class AccountResource {
     }
 
     private String createHtmlContentFromTemplate(final User user, final Locale locale, final HttpServletRequest request,
-                                                 final HttpServletResponse response) {
+                                                 final HttpServletResponse response, String template) {
         Map<String, Object> variables = new HashMap<>();
         variables.put("user", user);
         variables.put("baseUrl", request.getScheme() + "://" +   // "http" + "://
@@ -207,6 +213,6 @@ public class AccountResource {
                                  ":" + request.getServerPort());
         IWebContext context = new SpringWebContext(request, response, servletContext,
                 locale, variables, applicationContext);
-        return templateEngine.process("activationEmail", context);
+        return templateEngine.process(template, context);
     }
 }

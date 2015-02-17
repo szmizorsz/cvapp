@@ -92,13 +92,13 @@ cvappApp.controller('RegisterController', function ($scope, $translate, Register
                     function (httpResponse) {
                         $scope.success = null;
                         if (httpResponse.status === 304 &&
-                                httpResponse.data.error && httpResponse.data.error === "Not Modified") {
+                            httpResponse.statusText === "Not Modified") {
                             $scope.error = null;
                             $scope.errorUserExists = "ERROR";
                         } else {
                             $scope.error = "ERROR";
                             $scope.errorUserExists = null;
-                        }
+                        }                        
                     });
             }
         }

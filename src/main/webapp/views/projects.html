@@ -1,103 +1,20 @@
 <div>
 
-    <h2>Projects</h2>
-
-    <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#saveProjectModal" ng-click="clear()">
-        <span class="glyphicon glyphicon-flash"></span> Create a new Project
-    </button>
-    <div class="modal fade" id="saveProjectModal" tabindex="-1" role="dialog" aria-labelledby="myProjectLabel"
-         aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <form name="form" role="form" novalidate
-                      class="ng-scope ng-invalid ng-invalid-required ng-dirty ng-valid-minlength"
-                      ng-submit="create()">
-
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
-                                ng-click="clear()">&times;</button>
-                        <h4 class="modal-title" id="myProjectLabel">Create or edit a Project</h4>
-                    </div>
-                    <div class="modal-body">
-                        <div class="form-group">
-                            <label>NameEN</label>
-                            <input type="text" class="form-control"
-                                   ng-model="project.nameEn">
-                        </div>
-                        <div class="form-group">
-                            <label>NameHu</label>
-                            <input type="text" class="form-control"
-                                   ng-model="project.nameHu">
-                        </div>
-                        <div class="form-group">
-                            <label>DescriptionEn</label>
-                            <input type="text" class="form-control"
-                                   ng-model="project.descriptionEn">
-                        </div>
-                        <div class="form-group">
-                            <label>DescriptionHu</label>
-                            <input type="text" class="form-control"
-                                   ng-model="project.descriptionHu">
-                        </div>
-                        <div class="form-group">
-                            <label>ClientEn</label>
-                            <input type="text" class="form-control"
-                                   ng-model="project.clientEn">
-                        </div>
-                        <div class="form-group">
-                            <label>ClientHu</label>
-                            <input type="text" class="form-control"
-                                   ng-model="project.clientHu">
-                        </div>
-                        <div class="form-group">
-                            <label>Start</label>
-                            <input type="date" class="form-control"
-                                   ng-model="project.start">
-                        </div>
-                        <div class="form-group">
-                            <label>End</label>
-                            <input type="date" class="form-control"
-                                   ng-model="project.end">
-                        </div>
-                        
-                        <div class="form-group">
-                            <label>company</label>
-                            <select class="form-control" ng-model="project.company.id" ng-options="company.id as company.nameEn for company in companys">
-                            </select>
-                        </div>
-                         <div class="form-group">
-                             <label>technology</label>
-                             <select class="form-control" multiple ng-model="project.technologys" ng-options="technology as technology.name for technology in technologys track by technology.id">
-                             </select>
-                         </div>
-
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="clear()">
-                            <span class="glyphicon glyphicon-ban-circle"></span> Cancel
-                        </button>
-                        <button type="submit" ng-disabled="form.$invalid" class="btn btn-primary">
-                            <span class="glyphicon glyphicon-save"></span> Save
-                        </button>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
+    <h2 translate="data.project.header">Projects</h2>
 
     <div class="table-responsive">
         <table class="table table-striped">
             <thead>
                 <tr>
-                    <th>NameEn</th>
-                    <th>NameHu</th>
-                    <th>DescriptionEn</th>
-                    <th>DescriptionHu</th>
-                    <th>ClientEn</th>
-                    <th>ClientHu</th>
-                    <th>Start</th>
-                    <th>End</th>
-                    <th>company</th>
+                    <th translate="data.project.nameEn">NameEn</th>
+                    <th translate="data.project.nameHu">NameHu</th>
+                    <th translate="data.project.descriptionEn">DescriptionEn</th>
+                    <th translate="data.project.descriptionHu">DescriptionHu</th>
+                    <th translate="data.project.clientEn">ClientEn</th>
+                    <th translate="data.project.clientHu">ClientHu</th>
+                    <th translate="data.project.start">Start</th>
+                    <th translate="data.project.end">End</th>
+                    <th translate="data.project.company">Company</th>
                     <th></th>
                 </tr>
             </thead>
@@ -116,16 +33,100 @@
                         <button type="submit"
                                 ng-click="update(project.id)"
                                 class="btn btn-default">
-                            <span class="glyphicon glyphicon-pencil"></span> Edit
+                            <span class="glyphicon glyphicon-pencil"></span><span translate="global.label.edit">Edit</span>
                         </button>
                         <button type="submit"
                                 ng-click="delete(project.id)"
                                 class="btn btn-danger">
-                            <span class="glyphicon glyphicon-remove-circle"></span> Delete
+                            <span class="glyphicon glyphicon-remove-circle"></span><span translate="global.label.delete">Delete</span>
                         </button>
                     </td>
                 </tr>
             </tbody>
         </table>
     </div>
+
+        <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#saveProjectModal" ng-click="clear()">
+        <span class="glyphicon glyphicon-flash"></span><span translate="global.label.create">Create</span>
+    </button>
+    <div class="modal fade" id="saveProjectModal" tabindex="-1" role="dialog" aria-labelledby="myProjectLabel"
+         aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <form name="form" role="form" novalidate
+                      class="ng-scope ng-invalid ng-invalid-required ng-dirty ng-valid-minlength"
+                      ng-submit="create()">
+
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                                ng-click="clear()">&times;</button>
+                        <h4 class="modal-title" id="myProjectLabel" translate="global.label.createoredit">Create or edit</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="form-group">
+                            <label translate="data.project.nameEn">NameEN</label>
+                            <input type="text" class="form-control"
+                                   ng-model="project.nameEn">
+                        </div>
+                        <div class="form-group">
+                            <label translate="data.project.nameHu">NameHu</label>
+                            <input type="text" class="form-control"
+                                   ng-model="project.nameHu">
+                        </div>
+                        <div class="form-group">
+                            <label translate="data.project.descriptionEn">DescriptionEn</label>
+                            <input type="text" class="form-control"
+                                   ng-model="project.descriptionEn">
+                        </div>
+                        <div class="form-group">
+                            <label translate="data.project.descriptionHu">DescriptionHu</label>
+                            <input type="text" class="form-control"
+                                   ng-model="project.descriptionHu">
+                        </div>
+                        <div class="form-group">
+                            <label translate="data.project.clientEn">ClientEn</label>
+                            <input type="text" class="form-control"
+                                   ng-model="project.clientEn">
+                        </div>
+                        <div class="form-group">
+                            <label translate="data.project.clientHu">ClientHu</label>
+                            <input type="text" class="form-control"
+                                   ng-model="project.clientHu">
+                        </div>
+                        <div class="form-group">
+                            <label translate="data.project.start">Start</label>
+                            <input type="date" class="form-control"
+                                   ng-model="project.start">
+                        </div>
+                        <div class="form-group">
+                            <label translate="data.project.end">End</label>
+                            <input type="date" class="form-control"
+                                   ng-model="project.end">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label translate="data.project.company">company</label>
+                            <select class="form-control" ng-model="project.company.id" ng-options="company.id as company.nameEn for company in companys">
+                            </select>
+                        </div>
+                         <div class="form-group">
+                             <label translate="data.project.technology">technology</label>
+                             <select class="form-control" multiple ng-model="project.technologys" ng-options="technology as technology.name for technology in technologys track by technology.id">
+                             </select>
+                         </div>
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="clear()">
+                            <span class="glyphicon glyphicon-ban-circle"></span><span translate="global.label.cancel">Cancel</span>
+                        </button>
+                        <button type="submit" ng-disabled="form.$invalid" class="btn btn-primary">
+                            <span class="glyphicon glyphicon-save"></span><span translate="global.label.save">Save</span>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
 </div>

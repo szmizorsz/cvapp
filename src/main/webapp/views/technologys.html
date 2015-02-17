@@ -1,9 +1,39 @@
 <div>
 
-    <h2>Technologys</h2>
+    <h2 translate="data.technology.header">Technologys</h2>
+
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th translate="data.technology.name">Name</th>
+                    <th translate="data.technology.description">Description</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="technology in technologys">
+                    <td>{{technology.name}}</td>
+                    <td>{{technology.description}}</td>
+                    <td>
+                        <button type="submit"
+                                ng-click="update(technology.id)"
+                                class="btn btn-default">
+                            <span class="glyphicon glyphicon-pencil"></span><span translate="global.label.edit">Edit</span>
+                        </button>
+                        <button type="submit"
+                                ng-click="delete(technology.id)"
+                                class="btn btn-danger">
+                            <span class="glyphicon glyphicon-remove-circle"></span><span translate="global.label.delete">Delete</span>
+                        </button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 
     <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#saveTechnologyModal" ng-click="clear()">
-        <span class="glyphicon glyphicon-flash"></span> Create a new Technology
+        <span class="glyphicon glyphicon-flash"></span><span translate="global.label.create">Create</span>
     </button>
     <div class="modal fade" id="saveTechnologyModal" tabindex="-1" role="dialog" aria-labelledby="myTechnologyLabel"
          aria-hidden="true">
@@ -16,22 +46,16 @@
                     <div class="modal-header">
                         <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
                                 ng-click="clear()">&times;</button>
-                        <h4 class="modal-title" id="myTechnologyLabel">Create or edit a Technology</h4>
+                        <h4 class="modal-title" id="myTechnologyLabel" translate="global.label.createoredit">Create or edit</h4>
                     </div>
                     <div class="modal-body">
                         <div class="form-group">
-                            <label>ID</label>
-                            <input type="text" class="form-control" name="id"
-                                   ng-model="technology.id" readonly>
-                        </div>
-
-                        <div class="form-group">
-                            <label>Name</label>
+                            <label translate="data.technology.name">Name</label>
                             <input type="text" class="form-control"
                                    ng-model="technology.name">
                         </div>
                         <div class="form-group">
-                            <label>Description</label>
+                            <label translate="data.technology.description">Description</label>
                             <input type="text" class="form-control"
                                    ng-model="technology.description">
                         </div>
@@ -40,10 +64,10 @@
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="clear()">
-                            <span class="glyphicon glyphicon-ban-circle"></span> Cancel
+                            <span class="glyphicon glyphicon-ban-circle"></span><span translate="global.label.cancel">Cancel</span>
                         </button>
                         <button type="submit" ng-disabled="form.$invalid" class="btn btn-primary">
-                            <span class="glyphicon glyphicon-save"></span> Save
+                            <span class="glyphicon glyphicon-save"></span><span translate="global.label.save">Save</span>
                         </button>
                     </div>
                 </form>
@@ -51,35 +75,4 @@
         </div>
     </div>
 
-    <div class="table-responsive">
-        <table class="table table-striped">
-            <thead>
-                <tr>
-                    <th>ID</th>
-                    <th>Name</th>
-                    <th>Description</th>
-                    <th></th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr ng-repeat="technology in technologys">
-                    <td>{{technology.id}}</td>
-                    <td>{{technology.name}}</td>
-                    <td>{{technology.description}}</td>
-                    <td>
-                        <button type="submit"
-                                ng-click="update(technology.id)"
-                                class="btn btn-default">
-                            <span class="glyphicon glyphicon-pencil"></span> Edit
-                        </button>
-                        <button type="submit"
-                                ng-click="delete(technology.id)"
-                                class="btn btn-danger">
-                            <span class="glyphicon glyphicon-remove-circle"></span> Delete
-                        </button>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
 </div>

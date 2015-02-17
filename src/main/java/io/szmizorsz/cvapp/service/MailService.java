@@ -41,9 +41,15 @@ public class MailService {
      */
     private String from;
 
+    /**
+     * Email address that needs to be notified when a business event (registration, activation, etc.) happens.
+     */
+    private String toBeNotifiedEmail;
+
     @PostConstruct
     public void init() {
         this.from = env.getProperty("spring.mail.from");
+        this.toBeNotifiedEmail = env.getProperty("spring.mail.notificationEmail");
     }
 
     @Async
@@ -71,5 +77,19 @@ public class MailService {
         log.debug("Sending activation e-mail to '{}'", email);
         String subject = messageSource.getMessage("email.activation.title", null, locale);
         sendEmail(email, subject, content, false, true);
+    }
+
+    @Async
+    public void sendRegistrationNotificationEmail(String content, Locale locale) {
+        log.debug("Sending registration notification e-mail to '{}'", toBeNotifiedEmail);
+        String subject = messageSource.getMessage("email.registration.notification.title", null, locale);
+        sendEmail(toBeNotifiedEmail, subject, content, false, true);
+    }
+
+    @Async
+    public void sendActivationNotificationEmail(String content, Locale locale) {
+        log.debug("Sending activation notification e-mail to '{}'", toBeNotifiedEmail);
+        String subject = messageSource.getMessage("email.activation.notification.title", null, locale);
+        sendEmail(toBeNotifiedEmail, subject, content, false, true);
     }
 }

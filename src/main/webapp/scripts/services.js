@@ -2,18 +2,21 @@
 
 /* Services */
 
-cvappApp.factory('LanguageService', function ($http, $translate, LANGUAGES) {
+cvappApp.factory('LanguageService', function ($http, $translate, LANGUAGES_EN, LANGUAGES_HU) {
         return {
             getBy: function(language) {
                 if (language == undefined) {
                     language = $translate.storage().get('NG_TRANSLATE_LANG_KEY');
                 }
                 if (language == undefined) {
-                    language = 'en';
+                    language = 'hu';
                 }
 
                 var promise =  $http.get('i18n/' + language + '.json').then(function(response) {
-                    return LANGUAGES;
+                    var languages
+                    if(language == 'en') languages = LANGUAGES_EN;
+                        else languages = LANGUAGES_HU;
+                    return languages;
                 });
                 return promise;
             }

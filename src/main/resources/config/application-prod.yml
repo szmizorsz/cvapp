@@ -39,7 +39,8 @@ spring:
             
 
     mail:
-        baseUrl: http://localhost:8080
+        baseUrl: http://cv.cfapps.io
+        notificationEmail: szmizorsz@gmail.com
 
     thymeleaf:
         mode: XHTML
