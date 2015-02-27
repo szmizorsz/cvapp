@@ -125,7 +125,7 @@ cvappApp.factory('Session', function () {
         return this;
     });
 
-cvappApp.factory('AuthenticationSharedService', function ($rootScope, $http, authService, Session, Account) {
+cvappApp.factory('AuthenticationSharedService', function ($rootScope, $http, authService, Session, Account, $location) {
         return {
             login: function (param) {
                 var data ="j_username=" + encodeURIComponent(param.username) +"&j_password=" + encodeURIComponent(param.password) +"&_spring_security_remember_me=" + param.rememberMe +"&submit=Login";
@@ -139,6 +139,7 @@ cvappApp.factory('AuthenticationSharedService', function ($rootScope, $http, aut
                         Session.create(data.login, data.firstName, data.lastName, data.email, data.roles);
                         $rootScope.account = Session;
                         authService.loginConfirmed(data);
+                        $location.path('/main');
                     });
                 }).error(function (data, status, headers, config) {
                     $rootScope.authenticationError = true;

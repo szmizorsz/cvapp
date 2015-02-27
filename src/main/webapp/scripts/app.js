@@ -107,6 +107,13 @@ cvappApp
                         authorizedRoles: [USER_ROLES.all]
                     }
                 })
+                .when('/main', {
+                    templateUrl: 'views/main.html',
+                    controller: 'MainController',
+                    access: {
+                        authorizedRoles: [USER_ROLES.user]
+                    }
+                })                
                 .otherwise({
                     templateUrl: 'views/public.html',
                     controller: 'PublicController',

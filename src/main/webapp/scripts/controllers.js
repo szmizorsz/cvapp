@@ -16,9 +16,16 @@ cvappApp.controller('PublicController', function ($scope, resolvedCompanyWithPro
         $scope.hasItems = function (arrayName) {            
             return arrayName.length > 0;              
         };
+
+        $scope.getLocalizedCVFile = function () {
+            return "../files/CV_" + $translate.storage().get('NG_TRANSLATE_LANG_KEY') + ".pdf";            
+        };
     });
 
 cvappApp.controller('AdminController', function ($scope) {
+    });
+
+cvappApp.controller('MainController', function ($scope) {
     });
 
 cvappApp.controller('LanguageController', function ($scope, $translate, LanguageService) {
