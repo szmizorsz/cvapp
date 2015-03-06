@@ -16,7 +16,7 @@ spring:
         databaseName: 
         serverName: 
         username: root
-        password: NA101mar
+        password: 
         cachePrepStmts: true
         prepStmtCacheSize: 250
         prepStmtCacheSqlLimit: 2048
@@ -39,7 +39,7 @@ spring:
             
 
     mail:
-        baseUrl: http://cv.cfapps.io
+        baseUrl: http://cvapp.cfapps.io
         notificationEmail: szmizorsz@gmail.com
 
     thymeleaf:

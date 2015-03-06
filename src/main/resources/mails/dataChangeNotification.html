@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title th:text="#{email.datachange.notification.title}">CVApp data change</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    </head>
+    <body>
+        <p th:text="#{email.datachange.notification.text.resource(${resource})}">
+            Resource
+        </p>
+        <p th:text="#{email.datachange.notification.text.method(${method})}">
+            Method
+        </p>
+        <p th:text="#{email.datachange.notification.text.data(${data})}">
+            Data
+        </p>
+    </body>
+</html>

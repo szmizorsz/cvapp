@@ -33,7 +33,7 @@
             "language": "Language"
         },
         "form": {
-            "username": "Userrname",
+            "username": "Username",
             "username.placeholder": "Your username",
             "newpassword": "Password",
             "newpassword.placeholder": "Password",
@@ -52,7 +52,6 @@
         },
         "messages": {
             "info": {
-                "authenticated": "If you want to <a href=\"#/login\">authenticate</a>, you can try the default accounts:<br/>- Administrator (login=\"admin\" and password=\"admin\") <br/>- User (login=\"user\" and password=\"user\").",
                 "register": "You don't have an account yet? <a href=\"#/register\" class=\"dark-blue\">Register</a>"
             },
             "error": {
@@ -82,12 +81,12 @@
     "public": {
         "header" : {
             "maintitle": "Curriculum Vitae",
-            "motto": "Online CV maintenance app with two Goals",
-            "purpose.publish": "Publish my CV",
+            "motto": "Online CV maintenance app with dual purpose",
+            "purpose.publish": "Publishing my CV",
             "experience": "Relevant experience",
             "education": "Education, Knowledge",
             "motivation": "Motivation",
-            "purpose.techexperience": "Play with cutting edge technologies",
+            "purpose.techexperience": "Playing with cutting edge technologies",
             "techfirstline": "Java2EE, Spring, NoSQL",
             "techsecondline": "AngularJS, Bootstrap",
             "techthirdline": "JHipster, Cloud Foundry"            
@@ -98,27 +97,123 @@
             "experience.technologyHeader": "Technologies:",
             "education": "Education, Knowledge",
             "motivation": "Motivation",
+            "motivation.description": "In my carrier I’ve been working in many complex IT environments in different sectors such as financial, telecom and governmental. I also have experience working with Hungarian and foreign clients and projects. I mainly focused on system and business analysis but always took my part in the development processes as well. From client interviews and requirement specifications to logical, functional and physical planning and schema definition I always had an overall view of the technical solutions. In addition I managed to keep my technical knowledge as up-to-date as possible with being involved in software development such as screen implementations, unit testing, and model maintenance in several parts of the software architecture. At this stage of my carrier I would like to focus more on development that’s why I am looking for a job in backend development field, possibly with Java based frameworks or frontend development in Javascript frameworks, such as AngularJS. This application is also a manifestation of my technology orientation. After <a href=\"#/register\">registration</a> you can log in and have more information about the application.",
+            "download": "CV download: ",            
             "relevantknowledge": "Relevant knowledge",
             "languageskills": "Language skills",
             "others": "Other experience",
-            "about": "About CV application"            
+            "about": "About CV application",
+            "about.header" : "This application is my playground that has been created for playing with cutting edge technologies and expanding my technical knowledge besides my job search. As a starting point I used <a href=\"http://jhipster.github.io/\" target=\"_blank\">JHipster</a> which is a scaffolding tool for CRUD-like modern web applications with the following technology stack:",            
+            "about.server" : "<a href=\"https://spring.io/\" target=\"_blank\">Spring</a> projects (Data, MVC) where <a href=\"http://projects.spring.io/spring-boot/\" target=\"_blank\">Spring Boot</a> provides the core and also the additional functionalities like metrics and helath indicators and much more",
+            "about.database" : "Application has two datasources, the relational data is in <a href=\"http://www.mysql.com/\" target=\"_blank\"> MySQL </a> and the NoSQL documents sits in <a href=\"http://www.mongodb.org/\" target=\"_blank\">MongoDB</a>.",
+            "about.client" : "The client side is developed in <a href=\"https://angularjs.org/\" target=\"_blank\">AngularJS</a> as a single page application",
+            "about.design" : "Design is kept simple thanks to <a href=\"http://getbootstrap.com/\" target=\"_blank\"> Bootstrap</a>",
+            "about.hosting" : "Cloud hosting is provided by <a href=\"https://run.pivotal.io/\" target=\"_blank\">Pivotal Web Service</a>",
+            "about.footer" : "If you are interested in technical and functional depth of the application you can <a href=\"#/register\">register</a> and log in to have more information.",
+            "contact.header" : "Personal information",
+            "contact.name" : "Szabolcs Szentes",
+            "contact.birthday" : " (28 April 1979)",
+            "contact.tel" : "+36-70-201-4557",
+            "contact.email" : "szmizorsz@gmail.com"            
         }
     },
     "main": {
-        "title": "Welcome, Java Hipster!",
-        "subtitle": "This is your homepage",
-        "logged": {
-            "message": "You are logged in as user \"{{username}}\"."
+        "header": "Wellcome in CVApp!",
+        "header.description": "This application is my playground that has been created for playing with cutting edge technologies and expanding my technical knowledge besides my job search. Here I provide an overview of the functional, architectural set up and about scaffolding and hosting environments.",
+        "header.sourcecode": "Source code is available at GitHub: <a href=\"https://github.com/szmizorsz/cvapp\" target=\"_blank\">CVApp repository</a>",
+        "header.architecture.description": "High level architecture that is detailed below:",
+        "scaffolding": {
+            "section": "Scaffolding",
+            "header": "The application was originally scaffolded by <a href=\"http://jhipster.github.io/\" target=\"_blank\"> JHipster </a> that is a CRUD-like generator for fast prototyping of modern web applications. It generates the whole starter application from database management scripts through server side code to front end code. It gave me a huge momentum at the beginning.",
+            "stack": {
+                "description": "Technology stack is chosen to satisfy the modern web requirement and scalability:",
+                "server.side": "Server side: ",
+                "server.description": "Spring Boot and other Spring projects: Data, MVC",
+                "client.side": "Client side: ",
+                "client.description": "AngularJS and Bootstrap",
+                "database.side": "Databases: ",
+                "database.description": "Relational and NoSQL support as well",
+                "processes.side": "Development process support:",
+                "processes.description": "Maven, Grunt, JUnit, UI tesing (Karma)"                
+            },
+           "functionality": {
+                "description": "Besides scaffolding the technology stack and configuration, it provides typical functionality required in web environment:",
+                "usermgmt": "User management: registration, activation, login, authentication, authorization, password management",
+                "crud": "CRUD functionalities for domain entities",
+                "admin": "Admin functions: health check, metrics",
+                "localization": "Localization support"
+            },
+            "footer": "These sections are described in details below."
         },
-        "question": "If you have any question on JHipster:",
-        "link": {
-            "homepage": "JHipster homepage",
-            "stackoverflow": "JHipster on Stack Overflow",
-            "bugtracker": "JHipster bug tracker",
-            "contact": "contact @java_hipster on Twitter"
+        "database": {
+            "section": "Databases",
+            "header": "Application has two datasources, the relational data is in <a href=\"http://www.mysql.com/\" target=\"_blank\"> MySQL </a> and the NoSQL documents sit in <a href=\"http://www.mongodb.org/\" target=\"_blank\">MongoDB</a>.",
+            "relationalEntities": {
+                "description": "Following entities are relational:",
+                "company": "Companies",
+                "project": "Projects",
+                "technology": "Technologies",
+                "user": "Users and audit events"
+            },
+           "NoSQLEntities": {
+                "description": "Following entities come from NoSQL database:",
+                "education": "Educations",
+                "language": "Language skills",
+                "knowledge": "Relevant knowledge",
+                "other": "Other interests"
+            },
+            "schema.management": "Schema management and data load are application side driven: <a href=\"http://www.liquibase.org/\" target=\"_blank\"> Liquidbase</a> in the relational database, <a href=\"https://github.com/secondmarket/mongeez\" target=\"_blank\">Mongeez</a> in NoSQL.",
+            "footer": "Data can be changed and immediately reflected in views, I will get notified and reload the original..."
         },
-        "like": "If you like JHipster, don't forget to give us a star on",
-        "github": "Github"
+        "server": {
+            "section": "Server side",
+            "spring": {
+                "description": "Server side solutions mainly rely on <a href=\"https://spring.io/\" target=\"_blank\"> Spring</a> projects:",
+                "boot": {
+                    "description": "<a href=\"http://projects.spring.io/spring-boot/\" target=\"_blank\">Spring Boot</a> is the core and the provider for admin functions: ",
+                    "metrics": "Metrics",
+                    "health": "Health checks",
+                    "loglevels": "Log levels"
+                },
+                "data": "<a href=\"http://projects.spring.io/spring-data/\" target=\"_blank\">Spring Data</a> is the common abstactions for DAO layer through repositories",
+                "mvc": "<a href=\"http://docs.spring.io/spring/docs/current/spring-framework-reference/html/mvc.html\" target=\"_blank\">Spring MVC</a> exposes the service layer through REST API",
+                "security": "<a href=\"http://projects.spring.io/spring-security/\" target=\"_blank\">Spring Security</a> provides the server side authentication"
+            },
+           "other": {
+                "technologies": "Other technologies integrated into the system alongside Spring projects:",
+                "hibernate": "<a href=\"http://hibernate.org/\" target=\"_blank\">Hibernate</a> is the ORM layer",
+                "ehcahce": "<a href=\"http://ehcache.org/\" target=\"_blank\">Ehcache</a> is the JVM side local entity cache",
+                "swagger": "<a href=\"http://swagger.io/\" target=\"_blank\">Swagger</a> provides the interactive online <a href=\"#/docs\">documentation</a> of REST APIs",
+                "thymeleaf": "<a href=\"http://www.thymeleaf.org/\" target=\"_blank\">Thymeleaf</a> template engine generates the localized HTML based letters"
+            }            
+        },
+        "client": {
+            "section": "Client side",
+            "angular": {
+                "description": "Front end is a single-page application based on <a href=\"https://angularjs.org/\" target=\"_blank\">AngularJS</a> with the following additional modules:",
+                "ngResource": "<a href=\"https://docs.angularjs.org/api/ngResource/service/$resource\" target=\"_blank\">ngResource</a> is the CRUD oriented abstraction of the server side REST APIs",
+                "ngRoute": "<a href=\"https://docs.angularjs.org/api/ngRoute\" target=\"_blank\">ngRoute</a> for the internal routing inside the application",
+                "translate": "<a href=\"https://github.com/angular-translate/angular-translate\" target=\"_blank\">Angular Translate</a> for supporting internalization",
+                "smoothScroll": "<a href=\"http://ngmodules.org/modules/smoothScroll\" target=\"_blank\">Angular smooth scroll</a> for scrolling effects"
+            },
+            "design": "The simplicity of the design is based on <a href=\"http://getbootstrap.com/\" target=\"_blank\"> Bootstrap</a> providing out-of-the-box responsivity."
+        },
+        "processes": {
+            "section": "Development process support",
+            "description": "Development process tools are originally supported by the JHipster scaffolded application:",
+            "tools": {
+                "maven": "The server side project is <a href=\"http://maven.apache.org/\" target=\"_blank\">Maven</a> based with <a href=\"http://docs.spring.io/spring-boot/docs/1.2.1.RELEASE/maven-plugin/\" target=\"_blank\">Spring Boot Maven plugin</a> extension",
+                "bower": "<a href=\"http://bower.io/\" target=\"_blank\">Bower</a> provides the client side package management",
+                "karma": "Besides JUnit server side tests there are scaffolded client side test skeletons with <a href=\"http://karma-runner.github.io/0.12/index.html\" target=\"_blank\">Karma</a>"                
+            }
+        },
+        "hosting": {
+            "section": "Hosting",
+            "description": "CVApp is hosted at <a href=\"https://run.pivotal.io/\" target=\"_blank\">Pivotal Web Service</a> with the following external services: ",
+            "mysql": "MySQL cloud service from <a href=\"https://www.cleardb.com/\" target=\"_blank\">ClearDB</a> with a three node cluster",
+            "mongo": "MongoDB sits at <a href=\"https://mongolab.com\" target=\"_blank\">MongoLab</a> service provider",
+            "footer": "Application server at Pivotal runs in a single instance but could be extended in case of growing usage which is obviously not the case in CVApp..."
+        }
     },
     "activate": {
         "title": "Activation",
@@ -130,7 +225,8 @@
     "register": {
         "title": "Registration",
         "form": {
-            "button": "Register"
+            "button": "Register",
+            "email.placeholder": "Valid email needed for activation"
         },
         "messages": {
             "validate": {

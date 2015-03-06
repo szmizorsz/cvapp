@@ -114,15 +114,24 @@
         Motivation
     </div>
 
-            <p translate="public.body.motivation.description">Motivation description</p>
+            <p class="justified-text" translate="public.body.motivation.description">Motivation description</p>           
+            
+    <div class="section-header" id="contact" translate="public.body.contact.header">
+        Contacts
+    </div>
+        <p>
+            <span translate="public.body.contact.name" class="contact-highlight">Name</span><span translate="public.body.contact.birthday">Birthday</span>
+            <span class="contact-highlight contact-item">Mail: </span><span translate="public.body.contact.email">Email</span>
+            <span class="contact-highlight contact-item">Tel: </span><span translate="public.body.contact.tel">Telephone</span>
+        </p>
            
-            <p style="float: right"><span translate="public.body.download">Download: </span><a ng-href={{getLocalizedCVFile()}}><span class="glyphicon glyphicon-download-alt"></span></a></p>
+        <p class="download-item"><span translate="public.body.download">Download: </span><a ng-href={{getLocalizedCVFile()}} target=\"_blank\"><span class="glyphicon glyphicon-download-alt"></span></a></p>
 
     <div class="section-header" id="about" translate="public.body.about">
         About CV App
     </div>
 
-        <p translate="public.body.about.header" translate="public.body.about.header">Header description
+        <p class="justified-text" translate="public.body.about.header">Header description
             <li class="description-item" translate="public.body.about.server">Server side description</li>
             <li class="description-item" translate="public.body.about.database">Database side description</li>
             <li class="description-item" translate="public.body.about.client">Client side description</li>

@@ -52,7 +52,6 @@
         }, 
         "messages": {
             "info": {
-                "authenticated": "If you want to <a href=\"#/login\">authenticate</a>, you can try the default accounts:<br/>- Administrator (login=\"admin\" and password=\"admin\") <br/>- User (login=\"user\" and password=\"user\").",
                 "register": "Még nincs accountja? <a href=\"#/register\" class=\"dark-blue\">Regisztrálás</a>"
             },
             "error": {
@@ -98,29 +97,34 @@
             "experience.technologyHeader": "Technológiák:",            
             "education": "Tanulmányok, Képzések, Szakmai ismeret",
             "motivation": "Motiváció",
-            "motivation.description": "Eddigi munkám során több komplex informatikai, és szervezeti környezetben dolgoztam, különböző ágazatokban, jelentős tapasztalatokat gyűjtve mind külföldi ügyfelekkel, mind itthon a pénzügyi, telekom, és az államigazgatási szektorban. A projektek során a projektvezetési, rendszertervezési és üzleti elemzési tapasztalatok szerzése mellett mindig találtam alkalmat a fejlesztési folyamatokban való tevékeny részvételre. Az ügyfélinterjúk, követelmény specifikálás és rendszertervezésen túl, ami kiterjedt mind a logikai modellezésre, funkcionális és ergonómiai tervezésre, többször bekapcsolódtam a tényleges megvalósításba. Unit tesztek írásától kezdve felületek megvalósításáig, a modellek és egyéb architektúrális rétegek karbantartásán keresztül mindig igyekeztem frissen tartani a technikai tudásomat. Pályafutásom jelenlegi szakaszában leginkább fejlesztési feladatokat szeretnék végezni, akár backend technológiákkal, lehetőleg Java alapú keretrendszerekkel, vagy esetleg Javascript alapú frontend keretrendszerekkel. Technológiai érdeklődésemből kifolyólag hoztam létre ezt az alkalmazést is, amelynek részleteiről <a href=\"#/register\">regisztrálás</a>, és bejelentkezés után részletesebb információkat kaphat.",
-            "download": "Letöltés: ",
+            "motivation.description": "Eddigi munkám során több komplex informatikai, és szervezeti környezetben dolgoztam, különböző ágazatokban, jelentős tapasztalatokat gyűjtve mind külföldi ügyfelekkel, mind itthon a pénzügyi, telekom, és az államigazgatási szektorban. A projektek során a projektvezetési, rendszertervezési és üzleti elemzési tapasztalatok szerzése mellett mindig találtam alkalmat a fejlesztési folyamatokban való tevékeny részvételre. Az ügyfélinterjúk, követelmény specifikálás és rendszertervezésen túl, ami kiterjedt mind a logikai modellezésre, funkcionális és ergonómiai tervezésre, többször bekapcsolódtam a tényleges megvalósításba. Unit tesztek írásától kezdve felületek megvalósításáig, a modellek és egyéb architektúrális rétegek karbantartásán keresztül mindig igyekeztem frissen tartani a technikai tudásomat. Pályafutásom jelenlegi szakaszában leginkább fejlesztési feladatokat szeretnék végezni, akár backend technológiákkal, lehetőleg Java alapú keretrendszerekkel, vagy esetleg Javascript alapú frontend keretrendszerekkel. Technológiai érdeklődésemből kifolyólag hoztam létre ezt az alkalmazást is, amelynek részleteiről <a href=\"#/register\">regisztrálás</a>, és bejelentkezés után részletesebb információkat kaphat.",
+            "download": "Önéletrajz letöltése: ",
             "relevantknowledge": "Szakmai ismeretek",
             "languageskills": "Nyelvtudás",
             "others": "Egyéb",            
             "about": "CV App alkalmazásról",
-            "about.header" : "Ez az alkalmazás az én homokozóm, amit a tényleges munkakeresési célú életrajz publikálás mellett azért is hoztam létre, hogy bővítsem technológiai ismereteim. Kiindulásnak a <a href=\"http://jhipster.github.io/\">JHipster</a> kód generátort használtam, ami a mai modern web applikációk technológia stack-jéből az alábbiakra épül:",            
-            "about.server" : "<a href=\"https://spring.io/\">Spring</a> projektekre (Data, MVC), ahol <a href=\"http://projects.spring.io/spring-boot/\">Spring Boot</a> adja a vázat és néhány addicionális funkcionalitást: alkalmazás metrikák, indikátorok",
-            "about.database" : "Az alkalmazás két adatbázist használ, a relációs adatok <a href=\"http://www.mysql.com/\"> MySQL </a> adatbázisban tárolódnak, míg a NoSQL adatok <a href=\"http://www.mongodb.org/\">MongoDB</a> adatbázisban.",
-            "about.client" : "A kliens oldal <a href=\"https://angularjs.org/\">AngularJS</a> keretrendszerrel single page alkalmazásként, a core angular modulok mellett  további kiegészítő modulokkal lett megvalósítva.",
-            "about.design" : "A design minimalizmusát <a href=\"http://getbootstrap.com/\"> Bootstrap</a> adja",
-            "about.hosting" : "Illetve a cloud hosting-ot a <a href=\"https://run.pivotal.io/\">Pivotal Web Service</a> biztosítja",
-            "about.footer" : "Ha ennél részletesebben érdekli az alkalmazás technológiai és funkcionális felépítése, illetve hogyan tartom karban az adatokat, akkor itt <a href=\"#/register\">regisztrálhat</a>, és bejelentkezés után részletesebb információkat kap, illetve letöltheti a kódot."
+            "about.header" : "Ez az alkalmazás az én homokozóm, amit a tényleges munkakeresési célú életrajz publikálás mellett azért is hoztam létre, hogy bővítsem technológiai ismereteim. Kiindulásnak a <a href=\"http://jhipster.github.io/\" target=\"_blank\">JHipster</a> kód generátort használtam, ami a mai modern web applikációk technológia stack-jéből az alábbiakra épül:",            
+            "about.server" : "<a href=\"https://spring.io/\" target=\"_blank\">Spring</a> projektekre (Data, MVC), ahol <a href=\"http://projects.spring.io/spring-boot/\" target=\"_blank\">Spring Boot</a> adja a vázat és néhány addicionális funkcionalitást: alkalmazás metrikák, indikátorok",
+            "about.database" : "Az alkalmazás két adatbázist használ, a relációs adatok <a href=\"http://www.mysql.com/\" target=\"_blank\"> MySQL </a> adatbázisban tárolódnak, míg a NoSQL adatok <a href=\"http://www.mongodb.org/\" target=\"_blank\">MongoDB</a> adatbázisban.",
+            "about.client" : "A kliens oldal <a href=\"https://angularjs.org/\" target=\"_blank\">AngularJS</a> keretrendszerrel single page alkalmazásként, a core angular modulok mellett  további kiegészítő modulokkal lett megvalósítva.",
+            "about.design" : "A design minimalizmusát <a href=\"http://getbootstrap.com/\" target=\"_blank\"> Bootstrap</a> adja",
+            "about.hosting" : "Illetve a cloud hosting-ot a <a href=\"https://run.pivotal.io/\" target=\"_blank\">Pivotal Web Service</a> biztosítja",
+            "about.footer" : "Ha ennél részletesebben érdekli az alkalmazás technológiai és funkcionális felépítése, illetve hogyan tartom karban az adatokat, akkor itt <a href=\"#/register\">regisztrálhat</a>, és bejelentkezés után részletesebb információkat kap, illetve letöltheti a kódot.",
+            "contact.header" : "Személyes adatok",
+            "contact.name" : "Szentes Szabolcs ",
+            "contact.birthday" : " (1979.04.28)",
+            "contact.tel" : "70-201-4557",
+            "contact.email" : "szmizorsz@gmail.com"
         }
     },
     "main": {
         "header": "Üdvözöllek a CVApp alkalamzásban!",
         "header.description": "Ez az alkalmazás az én homokozóm, amit a tényleges munkakeresési célú életrajz publikálás mellett azért is hoztam létre, hogy bővítsem a technológiai ismereteim. Itt adok egy rövid áttekintés arról hogyan épül fel funkcionálisan, architektúrálisan, mi a hosting környezet, illetve hogyan hoztam létre.",
-        "header.sourcecode": "A forráskód GitHub-ról letölthető: <a href=\"https://github.com/szmizorsz/cvapp\">CVApp repository</a>",
+        "header.sourcecode": "A forráskód GitHub-ról letölthető: <a href=\"https://github.com/szmizorsz/cvapp\" target=\"_blank\">CVApp repository</a>",
         "header.architecture.description": "Az architektúra magas szintű áttekintő ábrája, amit lejebb részletezek:",
         "scaffolding": {
             "section": "Scaffolding",
-            "header": "Az alkalmazás vázát <a href=\"http://jhipster.github.io/\"> JHipster </a> generátorral készítettem, ami CRUD jellegű modern web alkalmazások prototipizálását célozza meg. Pincétől a padlásig legenerálja az alap kódot, jelentősen meggyorsítva a kezdeteket.",
+            "header": "Az alkalmazás vázát <a href=\"http://jhipster.github.io/\" target=\"_blank\"> JHipster </a> generátorral készítettem, ami CRUD jellegű modern web alkalmazások prototipizálását célozza meg. Pincétől a padlásig legenerálja az alap kódot, jelentősen meggyorsítva a kezdeteket.",
             "stack": {
                 "description": "A technológiai stack a mai webes követelményeket kiszolgáló, skálázható igények figyelembe vételével:",
                 "server.side": "Szerver oldalon: ",
@@ -143,7 +147,7 @@
         },
         "database": {
             "section": "Adatbázisok",
-            "header": "Az alkalmazás két datasource-ot használ, a relációs adatok <a href=\"http://www.mysql.com/\"> MySQL </a> adatbázisban tárolódnak, míg a NoSQL adatok <a href=\"http://www.mongodb.org/\">MongoDB</a> adatbázisban.",
+            "header": "Az alkalmazás két datasource-ot használ, a relációs adatok <a href=\"http://www.mysql.com/\" target=\"_blank\"> MySQL </a> adatbázisban tárolódnak, míg a NoSQL adatok <a href=\"http://www.mongodb.org/\" target=\"_blank\">MongoDB</a> adatbázisban.",
             "relationalEntities": {
                 "description": "Az alábbi domain entitások a relációs adatbáziból jönnek:",
                 "company": "Cégek",
@@ -158,56 +162,56 @@
                 "knowledge": "Szakmai ismeret",
                 "other": "Egyéb"
             },
-            "schema.management": "A schémák és adatbetöltések alkalmazás oldalról menedzselődnek, relációs esetben <a href=\"http://www.liquibase.org/\"> Liquidbase</a>, NoSQL esetben <a href=\"https://github.com/secondmarket/mongeez\">Mongeez</a> eszközökkel.",
+            "schema.management": "A sémák és adatbetöltések alkalmazás oldalról menedzselődnek, relációs esetben <a href=\"http://www.liquibase.org/\" target=\"_blank\"> Liquidbase</a>, NoSQL esetben <a href=\"https://github.com/secondmarket/mongeez\" target=\"_blank\">Mongeez</a> eszközökkel.",
             "footer": "Az egyes adatokat lehet változtatni, mivel értesülök róla, előbb-utóbb úgyis visszatöltöm az eredeti állapotot..."
         },
         "server": {
-            "section": "Adatbázisok",
+            "section": "Szerver oldal",
             "spring": {
-                "description": "A szerver oldali megoldások főképp <a href=\"https://spring.io/\"> Spring</a> projektekre alapulnak:",
+                "description": "A szerver oldali megoldások főképp <a href=\"https://spring.io/\" target=\"_blank\"> Spring</a> projektekre alapulnak:",
                 "boot": {
-                    "description": "<a href=\"http://projects.spring.io/spring-boot/\">Spring Boot</a> adja a vázat és néhány addicionális funkcionalitást: ",
+                    "description": "<a href=\"http://projects.spring.io/spring-boot/\" target=\"_blank\">Spring Boot</a> adja a vázat és néhány addicionális funkcionalitást: ",
                     "metrics": "Metrikák",
                     "health": "Indikátorok",
                     "loglevels": "Log szintek"
                 },
-                "data": "<a href=\"http://projects.spring.io/spring-data/\">Spring Data</a> biztosítja a DAO rétegek közös absztrakcióját standard repository-okon keresztül",
-                "mvc": "<a href=\"http://docs.spring.io/spring/docs/current/spring-framework-reference/html/mvc.html\">Spring MVC</a> pedig a szükséges funkcionalitások REST API kiajánlását",
-                "security": "<a href=\"http://projects.spring.io/spring-security/\">Spring Security</a> felelős a szerver oldali authentikációs megoldásokért"
+                "data": "<a href=\"http://projects.spring.io/spring-data/\" target=\"_blank\">Spring Data</a> biztosítja a DAO rétegek közös absztrakcióját standard repository-okon keresztül",
+                "mvc": "<a href=\"http://docs.spring.io/spring/docs/current/spring-framework-reference/html/mvc.html\" target=\"_blank\">Spring MVC</a> pedig a szükséges funkcionalitások REST API kiajánlását",
+                "security": "<a href=\"http://projects.spring.io/spring-security/\" target=\"_blank\">Spring Security</a> felelős a szerver oldali authentikációs megoldásokért"
             },
            "other": {
                 "technologies": "A Spring projektekkel együttműködve az alábbi technológiák lettek integrálva a rendszerbe:",
-                "hibernate": "<a href=\"http://hibernate.org/\">Hibernate</a> biztosítja az ORM réteget",
-                "ehcahce": "<a href=\"http://ehcache.org/\">Ehcache</a> működik alkalmazásba integrált lokális entitás cache-ként",
-                "swagger": "<a href=\"http://swagger.io/\">Swagger</a> gondoskodik a REST API-k interaktív online <a href=\"#/docs\">dokumentálásáról",
-                "thymeleaf": "<a href=\"http://www.thymeleaf.org/\">Thymeleaf</a> template engine használt a lokalizált html alapú levelek generálására"
+                "hibernate": "<a href=\"http://hibernate.org/\" target=\"_blank\">Hibernate</a> biztosítja az ORM réteget",
+                "ehcahce": "<a href=\"http://ehcache.org/\" target=\"_blank\">Ehcache</a> működik alkalmazásba integrált lokális entitás cache-ként",
+                "swagger": "<a href=\"http://swagger.io/\" target=\"_blank\">Swagger</a> gondoskodik a REST API-k interaktív online <a href=\"#/docs\">dokumentálásáról",
+                "thymeleaf": "<a href=\"http://www.thymeleaf.org/\" target=\"_blank\">Thymeleaf</a> template engine használt a lokalizált html alapú levelek generálására"
             }            
         },
         "client": {
             "section": "Kliens réteg",
             "angular": {
-                "description": "A kliens oldal <a href=\"https://angularjs.org/\">AngularJS</a> keretrendszerrel single page alkalmazásként, a core angular modulok mellett az alábbi kiegészítő modulokkal lett megvalósítva:",
-                "ngResource": "<a href=\"https://docs.angularjs.org/api/ngResource/service/$resource\">ngResource</a> a szerver oldali REST API-k CRUD orientált magas szintű absztrakciója",
-                "ngRoute": "<a href=\"https://docs.angularjs.org/api/ngRoute\">ngRoute</a> az alkalmazáson belüli routing megoldására",
-                "translate": "<a href=\"https://github.com/angular-translate/angular-translate\">Angular Translate</a> a lokalizáció támogatására",
-                "smoothScroll": "<a href=\"http://ngmodules.org/modules/smoothScroll\">Angular smooth scroll</a> görgetési effektek miatt"
+                "description": "A kliens oldal <a href=\"https://angularjs.org/\" target=\"_blank\">AngularJS</a> keretrendszerrel single page alkalmazásként, a core angular modulok mellett az alábbi kiegészítő modulokkal lett megvalósítva:",
+                "ngResource": "<a href=\"https://docs.angularjs.org/api/ngResource/service/$resource\" target=\"_blank\">ngResource</a> a szerver oldali REST API-k CRUD orientált magas szintű absztrakciója",
+                "ngRoute": "<a href=\"https://docs.angularjs.org/api/ngRoute\" target=\"_blank\">ngRoute</a> az alkalmazáson belüli routing megoldására",
+                "translate": "<a href=\"https://github.com/angular-translate/angular-translate\" target=\"_blank\">Angular Translate</a> a lokalizáció támogatására",
+                "smoothScroll": "<a href=\"http://ngmodules.org/modules/smoothScroll\" target=\"_blank\">Angular smooth scroll</a> görgetési effektek miatt"
             },
-            "design": "A design egyszerűségét <a href=\"http://getbootstrap.com/\"> Bootstrap</a> biztosítja, kihasználva a többé-kevésbbé dobozos reszponzivitást"
+            "design": "A design egyszerűségét <a href=\"http://getbootstrap.com/\" target=\"_blank\"> Bootstrap</a> biztosítja, kihasználva a többé-kevésbbé dobozos reszponzivitást"
         },
         "processes": {
             "section": "Fejlesztési folyamatok támogatása",
             "description": "A fejlesztési folyamatokat már a JHipster által generált váz támogatja az alábbi eszközökkel:",
             "tools": {
-                "maven": "A defacto szabványnak tekinthető <a href=\"http://maven.apache.org/\">Maven</a> menedzseli a szoftver fejlesztési életciklusát, illetve a <a href=\"http://docs.spring.io/spring-boot/docs/1.2.1.RELEASE/maven-plugin/\">Spring Boot Maven plugin</a> megkönnyíti a lokális futtatást és csomagolást",
-                "bower": "Kliens oldali package menedzsmentet a <a href=\"http://bower.io/\">Bower</a> biztosítja",
-                "karma": "Illetve már a generált verzióban is elérhető a szerver oldali JUnit tesztek mellett a kliens oldali <a href=\"http://karma-runner.github.io/0.12/index.html\">Karma</a> teszt szkeletonok is elérhetőek"                
+                "maven": "A defacto szabványnak tekinthető <a href=\"http://maven.apache.org/\" target=\"_blank\">Maven</a> menedzseli a szoftver fejlesztési életciklusát, illetve a <a href=\"http://docs.spring.io/spring-boot/docs/1.2.1.RELEASE/maven-plugin/\" target=\"_blank\">Spring Boot Maven plugin</a> megkönnyíti a lokális futtatást és csomagolást",
+                "bower": "Kliens oldali package menedzsmentet a <a href=\"http://bower.io/\" target=\"_blank\">Bower</a> biztosítja",
+                "karma": "Illetve már a generált verzióban is elérhető a szerver oldali JUnit tesztek mellett a kliens oldali <a href=\"http://karma-runner.github.io/0.12/index.html\" target=\"_blank\">Karma</a> teszt szkeletonok is elérhetőek"                
             }
         },
         "hosting": {
             "section": "Hosting",
-            "description": "Hosting-ot a Cloud Foundry alapú <a href=\"https://run.pivotal.io/\">Pivotal Web Service</a> biztosítja az alábbi külső szolgáltatókkal: ",
-            "mysql": "MySQL cloud szolgáltatás a <a href=\"https://www.cleardb.com/\">ClearDB</a> három node-os dedikált cluster-ére épül",
-            "mongo": "Míg a MongoDB adatbázis a <a href=\"https://mongolab.com\">MongoLab</a> szolgáltatása",
+            "description": "Hosting-ot a Cloud Foundry alapú <a href=\"https://run.pivotal.io/\" target=\"_blank\">Pivotal Web Service</a> biztosítja az alábbi külső szolgáltatókkal: ",
+            "mysql": "MySQL cloud szolgáltatás a <a href=\"https://www.cleardb.com/\" target=\"_blank\">ClearDB</a> három node-os dedikált cluster-ére épül",
+            "mongo": "Míg a MongoDB adatbázis a <a href=\"https://mongolab.com\" target=\"_blank\">MongoLab</a> szolgáltatása",
             "footer": "A Pivotal-os alkalmazás szerver (Spring Boot-ba ágyazott Tomcat) egy instance-on fut, azonban növekvő érdeklődést jelentő terhelés mellett további instance-okra skálázható (persze ha a lokális cache-et lecserélem distributed cache-re... akkor az én mesém is tovább tartott volna...)"
         }
     },
@@ -221,7 +225,8 @@
     "register": {
         "title": "Regisztrálás",
         "form": {
-            "button": "Regisztrálás"
+            "button": "Regisztrálás",
+            "email.placeholder": "Aktiváláshoz szükséges valós e-mail cím"
         },
         "messages": {
             "validate": {

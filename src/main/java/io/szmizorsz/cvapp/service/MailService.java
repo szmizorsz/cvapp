@@ -92,4 +92,11 @@ public class MailService {
         String subject = messageSource.getMessage("email.activation.notification.title", null, locale);
         sendEmail(toBeNotifiedEmail, subject, content, false, true);
     }
+
+    @Async
+    public void sendDataChangeNotificationEmail(String content, Locale locale) {
+        log.debug("Sending data change notification e-mail to '{}'", toBeNotifiedEmail);
+        String subject = messageSource.getMessage("email.datachange.notification.title", null, locale);
+        sendEmail(toBeNotifiedEmail, subject, content, false, true);
+    }
 }
