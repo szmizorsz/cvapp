@@ -301,25 +301,27 @@ header .intro-text .skills {
     text-align: justify;
 }
 
-.large-button {
-    background-color: #2C3E50;
-    text-align: center;
-    color: #fff;
-    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
-    font-size: 1.5em;
-    border: 1px solid transparent;
-    padding: 6px;
-    width: 555px;
-    border-radius: 4px;
-    margin-top: 20px;
-    margin-bottom: 10px;
-}
+@media(min-width:768px) {
+    .large-button {
+        background-color: #2C3E50;
+        text-align: center;
+        color: #fff;
+        font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+        font-size: 1.5em;
+        border: 1px solid transparent;
+        padding: 6px;
+        width: 555px;
+        border-radius: 4px;
+        margin-top: 20px;
+        margin-bottom: 10px;
+    }
 
-.large-label {
-    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
-    font-size: 1.5em;
-    padding-top: 10px;
-    padding-bottom: 5px;
+    .large-label {
+        font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+        font-size: 1.5em;
+        padding-top: 10px;
+        padding-bottom: 5px;
+    }
 }
 
 .error {

@@ -9,7 +9,7 @@ spring:
             host: localhost
             port: 27017
             database: cvapp
-    
+
     datasource:
         dataSourceClassName: org.h2.jdbcx.JdbcDataSource
         url: jdbc:h2:mem:jhipster
